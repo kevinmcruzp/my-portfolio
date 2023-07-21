@@ -1,4 +1,5 @@
 import CustomLanguageSelector from "./CustomLanguageSelector";
+import SwitchTheme from "./SwitchTheme";
 
 
 export default function Header() {
@@ -8,7 +9,7 @@ export default function Header() {
                 Header
             </div>
             
-            <div className="flex gap-4">
+            <div className="flex gap-6 items-center">
                 <nav className="flex gap-4">
                     <span>
                         <a href="#">Home</a>
@@ -21,8 +22,10 @@ export default function Header() {
                     </span>
                 </nav>
 
-                <CustomLanguageSelector />
-                
+                <div className="inline-flex items-center gap-2">
+                    <CustomLanguageSelector />
+                    <SwitchTheme />
+                </div>
             </div>
         </header>
     )
