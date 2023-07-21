@@ -9,13 +9,14 @@ export default function SwitchTheme () {
 
     useEffect(() => {
         const currentTheme = localStorage.getItem('theme');
+        currentTheme ? document.documentElement.setAttribute('class', currentTheme) : document.documentElement.setAttribute('class', 'dark');
         setIsDarkMode(currentTheme === 'dark');
     }, []);
 
     const handleThemeToggle = () => {
         setIsDarkMode(!isDarkMode);
         const newTheme = isDarkMode ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', newTheme);
+        document.documentElement.setAttribute('class', newTheme);
         localStorage.setItem('theme', newTheme);
     };
 
