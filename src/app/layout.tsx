@@ -2,7 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from '../components/Header'
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode, Suspense, useEffect, useState } from 'react'
+import Providers from '../components/Providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,11 +19,15 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        {children}
-      </body>
-    </html>
+      <html lang="en" className='dark' style={{colorScheme: 'dark'}}>
+        <body className={inter.className}>
+          <Providers>
+            <div className='w-full h-full dark:bg-bg dark:text-primary'>
+              <Header />
+              {children}  
+            </div>
+          </Providers>
+        </body>
+      </html>
   )
 }
