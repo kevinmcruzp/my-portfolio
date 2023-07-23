@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { RiMoonClearLine, RiSunLine } from 'react-icons/ri'
 import { useTheme } from "next-themes"
-import SwitchLoading from './SwtichLoading';
+import SwitchLoading from './SwitchLoading';
 
 export default function SwitchTheme () {
     const {resolvedTheme, setTheme} = useTheme()

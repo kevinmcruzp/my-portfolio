@@ -2,32 +2,53 @@
 import { type } from 'os';
 import React, { useEffect, useRef, useState } from 'react';
 import Flag from 'react-flagkit';
+import { usePathname, useRouter } from 'next/navigation'
 
 type Language = {
-    code: 'us' | 'br' | 'es';
+    code: 'en-us' | 'pt-br' | 'es-es';
     label: 'English' | 'Português' | 'Español';
 }
 
-const languages: Language[] = [
-  { code: 'us', label: 'English' },
-  { code: 'br', label: 'Português' },
-  { code: 'es', label: 'Español' },
-];
-
 export default function CustomLanguageSelector () {
+
+  const languages: Language[] = [
+    { code: 'en-us', label: 'English' },
+    { code: 'pt-br', label: 'Português' },
+    { code: 'es-es', label: 'Español' },
+  ];
+
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
 
+  const router = useRouter()
+
+  const pathName = usePathname()
+
+  useEffect(() => {
+    const locale = pathName.split('/')[1]
+    const language = languages.find(language => language.code.split('-')[0] === locale)
+    if (language) setSelectedLanguage(language)
+  }, [pathName])
+
+
+  const redirectedPathName = (locale: string) => {
+    if (!pathName) return '/'
+    
+    const segments = pathName.split('/')
+
+    segments[1] = locale
+    return segments.join('/')
+  }
 
   const languageSelectorRef = useRef<HTMLDivElement | null>(null);
 
   const handleLanguageChange = (language: Language) => {
-    setSelectedLanguage(language);
     setIsOpen(false);
-    // Add your language change logic here (e.g., update localization)
+    // Add your language change logic here, for example:
+    router.push(redirectedPathName(language.code.split('-')[0]))
   };
 
-  useEffect(() => {
+  useEffect(() => {    
     const handleOutsideClick = (event: MouseEvent) => {
       if (languageSelectorRef.current && !languageSelectorRef.current.contains(event.target as Node)) {
         setIsOpen(false);
@@ -52,7 +73,7 @@ export default function CustomLanguageSelector () {
           aria-expanded="true"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <Flag country={selectedLanguage.code.toUpperCase()} size={22} />
+          <Flag country={selectedLanguage.code.split('-')[1]?.toString().toUpperCase()} size={22} />
           <svg
             className="h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +97,9 @@ export default function CustomLanguageSelector () {
             "
           >
           <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="language-menu">
+            
             {languages.map((language) => (
+              
               <button
                 key={language.code}
                 onClick={() => handleLanguageChange(language)}
@@ -87,7 +110,7 @@ export default function CustomLanguageSelector () {
                 role="menuitem"
               >
                 {language.label}
-                <Flag country={language.code.toUpperCase()} size={22} />
+                <Flag country={language.code.split('-')[1].toString().toUpperCase()} size={22} />
               </button>
             ))}
           </div>
