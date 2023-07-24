@@ -92,7 +92,7 @@ export default function CustomLanguageSelector () {
 
       {isOpen && (
         <div className="
-              origin-top-right bg-bg_secondary absolute right-0 mt-2 w-40 rounded-md shadow-lg 
+              origin-top-right bg-bg_secondary absolute right-0 mt-2 w-40 rounded-md shadow-lg z-10
               ring-1 ring-black ring-opacity-5
             "
           >

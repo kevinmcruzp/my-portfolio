@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CustomLanguageSelector from "./CustomLanguageSelector";
 import SwitchTheme from "./SwitchTheme";
 
@@ -12,19 +13,20 @@ export default function Header() {
             <div className="flex gap-6 items-center">
                 <nav className="flex gap-4">
                     <span>
-                        <a href="#">Home</a>
+                        <Link href="/">Home</Link>
                     </span>
                     <span>
-                        <a href="#">About</a>
+                        <Link href="/about">About</Link>
                     </span>
                     <span>
-                        <a href="#">Portfolio</a>
+                        <Link href="/portfolio">Portfolio</Link>    
                     </span>
                 </nav>
 
                 <div className="inline-flex items-center gap-2">
                     <CustomLanguageSelector />
                     <SwitchTheme />
+                    
                 </div>
             </div>
         </header>
