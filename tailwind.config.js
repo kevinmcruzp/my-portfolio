@@ -20,7 +20,8 @@ module.exports = {
         hover:'#748CAB'
       },
       borderColor: {
-        hover:'#748CAB'
+        hover:'#748CAB',
+        divider: '#3E5C76',
       }
     },
   },
