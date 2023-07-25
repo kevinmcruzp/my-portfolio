@@ -63,8 +63,8 @@ export default function CustomLanguageSelector () {
   }, []);
 
   return (
-    <div className="relative inline-block text-left" ref={languageSelectorRef}>
-      <div>
+    <div className="relative inline-block" ref={languageSelectorRef}>
+      <div className='relative flex justify-center items-center'>
         <button
           type="button"
           className="inline-flex w-full items-center"

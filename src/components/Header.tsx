@@ -26,7 +26,6 @@ export default function Header() {
                 <div className="inline-flex items-center gap-2">
                     <CustomLanguageSelector />
                     <SwitchTheme />
-                    
                 </div>
             </div>
         </header>
