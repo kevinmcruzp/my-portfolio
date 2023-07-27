@@ -1,8 +1,8 @@
+import Footer from '@/src/components/home/Footer'
 import About from '@/src/components/home/About'
 import Main from '@/src/components/home/Main'
 import Portfolio from '@/src/components/home/Portfolio'
 import ShapeDivider from '@/src/components/home/ShapeDivider'
-import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
           </div>
       </section>
       <footer className='h-[534px] w-full max-w-screen-xl m-auto'>
-        footer
+        <Footer />
       </footer>
     </div>
   )
