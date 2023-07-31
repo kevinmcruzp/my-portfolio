@@ -1,66 +1,24 @@
-'use client'
-import { type } from 'os';
-import React, { useEffect, useRef, useState } from 'react';
 import Flag from 'react-flagkit';
-import { usePathname, useRouter } from 'next/navigation'
+import { Language } from './header/Header';
 
-type Language = {
-    code: 'en-us' | 'pt-br' | 'es-es';
-    label: 'English' | 'Português' | 'Español';
+type CustomLanguageSelectorProps = {
+  languages: Language[];
+  selectedLanguage: Language;
+  handleLanguageChange: (language: Language) => void;
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+  languageSelectorRef: React.MutableRefObject<HTMLDivElement | null>;
 }
 
-export default function CustomLanguageSelector () {
-
-  const languages: Language[] = [
-    { code: 'en-us', label: 'English' },
-    { code: 'pt-br', label: 'Português' },
-    { code: 'es-es', label: 'Español' },
-  ];
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
-
-  const router = useRouter()
-
-  const pathName = usePathname()
-
-  useEffect(() => {
-    const locale = pathName.split('/')[1]
-    const language = languages.find(language => language.code.split('-')[0] === locale)
-    if (language) setSelectedLanguage(language)
-  }, [pathName])
-
-
-  const redirectedPathName = (locale: string) => {
-    if (!pathName) return '/'
-    
-    const segments = pathName.split('/')
-
-    segments[1] = locale
-    return segments.join('/')
-  }
-
-  const languageSelectorRef = useRef<HTMLDivElement | null>(null);
-
-  const handleLanguageChange = (language: Language) => {
-    setIsOpen(false);
-    // Add your language change logic here, for example:
-    router.push(redirectedPathName(language.code.split('-')[0]))
-  };
-
-  useEffect(() => {    
-    const handleOutsideClick = (event: MouseEvent) => {
-      if (languageSelectorRef.current && !languageSelectorRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener('click', handleOutsideClick);
-
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, []);
+export default function CustomLanguageSelector (
+  { 
+    languages, 
+    selectedLanguage, 
+    handleLanguageChange, 
+    isOpen, 
+    setIsOpen, 
+    languageSelectorRef
+  } : CustomLanguageSelectorProps) {
 
   return (
     <div className="relative inline-block" ref={languageSelectorRef}>
