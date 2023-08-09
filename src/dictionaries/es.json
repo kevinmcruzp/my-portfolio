@@ -1,5 +1,6 @@
 {
     "about": {
-        "about": "Acerca de"
+        "title": "Title",
+        "description": "Description"
     }
 }
