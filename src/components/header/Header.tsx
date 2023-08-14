@@ -71,7 +71,7 @@ export default function Header() {
       }, []);
 
     return (
-        <header className="flex justify-between max-w-screen-xl m-auto h-[50px] items-center p-2">
+        <header className="flex justify-between max-w-screen-xl m-auto h-[50px] items-center p-2 border-b border-divider">
             <div className="flex items-center">
                 Header
             </div>

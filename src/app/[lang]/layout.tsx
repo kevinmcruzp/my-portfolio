@@ -29,7 +29,7 @@ export default function RootLayout({
       <html lang={params.lang} className='dark' style={{colorScheme: 'dark'}}>
         <body className={inter.className}>
           <Providers>
-            <div className='w-full h-full dark:bg-bg dark:text-primary'>
+            <div className='min-h-screen min-w-full bg-primary dark:bg-bg dark:text-primary'>
               <Header />
               {children}  
             </div>

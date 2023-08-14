@@ -5,6 +5,7 @@ import { GrInstagram } from "react-icons/gr";
 import { IoLogoNodejs, IoRocketSharp } from "react-icons/io5";
 import {
   RiArrowDownSLine,
+  RiArrowRightSLine,
   RiChatSmile2Line,
   RiChatSmile3Line,
 } from "react-icons/ri";
@@ -25,7 +26,8 @@ export const Icons = {
   Instagram: GrInstagram,
   Whatsapp: BsWhatsapp,
   Rocket: IoRocketSharp,
-  ChevronDown: RiArrowDownSLine,
+  ArrowDown: RiArrowDownSLine,
+  ArrowRight: RiArrowRightSLine,
   Command: FiCommand,
   JavaScript: SiJavascript,
   Css3: SiCss3,
