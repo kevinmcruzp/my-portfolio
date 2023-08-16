@@ -30,7 +30,9 @@ export default function RootLayout({
         <body className={inter.className}>
           <Providers>
             <div className='min-h-screen min-w-full bg-primary dark:bg-bg dark:text-primary'>
-              <Header />
+              <div className='w-full border-b border-divider'>
+                <Header />
+              </div>
               {children}  
             </div>
           </Providers>

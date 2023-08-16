@@ -11,10 +11,10 @@ export default function Home() {
         <Main />
       </section>
       
-      <section className='h-screen w-full bg-bg flex flex-col'>
+      <section className='min-h-screen w-full bg-bg flex flex-col'>
           <ShapeDivider />
 
-          <div className='flex-1 w-full bg-bg_secondary'>
+          <div className='flex flex-1 w-full bg-bg_secondary'>
               <div className='max-w-screen-xl m-auto h-full w-full grid grid-rows-2'>
                 <About />
                 <Portfolio />
