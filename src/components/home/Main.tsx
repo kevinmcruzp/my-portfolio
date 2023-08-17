@@ -21,7 +21,7 @@ export default function Main() {
           <span className="font-normal text-4xl md:text-7xl ">
             I&apos;m Kevin, a <br/> Software Engineer
           </span>
-          <span className="font-normal text-xs text-secondary w-96 md:text-sm">
+          <span className="font-normal text-xs text-secondary max-w-sm md:text-sm">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita,
             dolorum tempora, asperiores nemo numquam ullam similique hic fugiat
             obcaecati molestias laborum iusto inventore ea dicta maxime voluptatum
