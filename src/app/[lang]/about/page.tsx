@@ -23,43 +23,42 @@ export default async function About({
                 </div>
             </div>
             <div className="flex flex-col justify-center gap-5 md:w-1/2">
-                <span className="text-base md:text-lg font-light">My name is Kevin Cruz</span>
+                <span className="text-base md:text-lg font-light">{dictionary.about["pre-title"]}</span>
                 <span className="text-xl md:text-3xl font-normal">
-                    I&apos;m Engineer Computer, web Developer <br/> having 1 Years Of Experience
+                    {dictionary.about.title}
                 </span>
                 <p className="text-sm md:text-base font-light text-secondary">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minima dicta 
-                    magnam a fugit deserunt, mollitia ipsa itaque iure sapiente molestiae hic vero 
-                    cumque explicabo! Nesciunt adipisci sapiente eligendi accusamus?
+                    {dictionary.about.description}
                 </p>
                 <div className="flex flex-col gap-1">
                     <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">Full name</span>
+                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"]["full-name"]}</span>
                             <span className="text-sm md:text-base font-normal text-secondary">Kevin Cruz</span>
                     </div>
                     <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">Full name</span>
-                            <span className="text-sm md:text-base font-normal text-secondary">Kevin Cruz</span>
+                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"].age}</span>
+                            <span className="text-sm md:text-base font-normal text-secondary">25/02/1996</span>
+                    </div>
+                    
+                    <div className="flex gap-4">
+                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"].address}</span>
+                            <span className="text-sm md:text-base font-normal text-secondary">La Serena, Coquimbo, Chile.</span>
                     </div>
                     <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">Full name</span>
-                            <span className="text-sm md:text-base font-normal text-secondary">Kevin Cruz</span>
+                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"].email}</span>
+                            <span className="text-sm md:text-base font-normal text-secondary">kevin_mcp@outlook.com</span>
                     </div>
                     <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">Full name</span>
-                            <span className="text-sm md:text-base font-normal text-secondary">Kevin Cruz</span>
+                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"].whatsapp}</span>
+                            <span className="text-sm md:text-base font-normal text-secondary"></span>
                     </div>
                     <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">Full name</span>
-                            <span className="text-sm md:text-base font-normal text-secondary">Kevin Cruz</span>
+                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"]["social-media"]}</span>
+                            <span className="text-sm md:text-base font-normal text-secondary"></span>
                     </div>
                     <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">Full name</span>
-                            <span className="text-sm md:text-base font-normal text-secondary">Kevin Cruz</span>
-                    </div>
-                    <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">Full name</span>
-                            <span className="text-sm md:text-base font-normal text-secondary">Kevin Cruz</span>
+                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"].repository}</span>
+                            <span className="text-sm md:text-base font-normal text-secondary"></span>
                     </div>
                 </div>
                 <div className="flex w-full justify-center md:justify-start gap-3">
@@ -82,7 +81,7 @@ export default async function About({
                     <Icons.Css3 color="#00A2D6" size="23px" />
                 </div>
                 <button className="w-fit p-3 md:p-4 border-[1px] border-primary rounded-xl text-xs md:text-base font-normal mx-auto">
-                    DOWNLOAD MY CV
+                    {dictionary.about.button}
                 </button>
             </div>
         </section>

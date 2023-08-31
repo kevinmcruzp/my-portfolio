@@ -1,6 +1,78 @@
 {
-    "about": {
-        "title": "Title",
-        "description": "Description"
+    "home" : {
+        "1": {
+            "title": "I'm Kevin, a Software Engineer",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, dolorum tempora, asperiores nemo numquam ullam similique hic fugiat obcaecati molestias laborum iusto inventore ea dicta maxime voluptatum a consequuntur modi?"
+        },
+        "2": {
+            "about": {
+                "title": "About me",
+                "subtitle": "Im Engineer Computer, web Developer having 1 years of experience.",
+                "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore unde commodi eius dignissimos expedita, amet quae, cumque non accusamus incidunt possimus nemo optio asperiores, culpa doloribus saepe provident nulla ut.",
+                "button": "LEARN MORE",
+                "download": "DOWNLOAD MY CV"
+            },
+            "project": {
+                "title": "Projects",
+                "subtitle": "My works",
+                "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore unde commodi eius dignissimos expedita, amet quae, cumque non accusamus incidunt possimus nemo optio asperiores, culpa doloribus saepe provident nulla ut.",
+                "button": "PORTFOLIO"
+            }
+        },
+        "3": {
+            "contact": "Get in touch",
+            "email": "EMAIL ME",
+            "phone": "CALL ME"
+        }
+    },
+    "about" : {
+        "pre-title": "My name is Kevin Cruz",
+        "title": "I'm Engineer Computer, web Developer having 1 Years Of Experience",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minima dicta magnam a fugit deserunt, mollitia ipsa itaque iure sapiente molestiae hic vero cumque explicabo! Nesciunt adipisci sapiente eligendi accusamus?",
+        "personal-information": {
+            "full-name": "Full Name",
+            "age": "Age",
+            "address": "Address",
+            "whatsapp": "Whatsapp",
+            "email": "Email",
+            "social-media": "Social Media",
+            "repository": "Repository"
+        },
+        "button": "DOWNLOAD MY CV"
+    },
+    "portfolio" : {
+        "reddit-clone": {
+            "title": "Reddit Clone",
+            "description": "Reddit clone with post system, login, etc..."
+        },
+        "portfolio": {
+            "title": "Portfolio",
+            "description": "Portfolio with my projects."
+        },
+        "dash-admin": {
+            "title": "Admin Dashboard",
+            "description": "Working with dashboard design, charts and tables."
+        },
+        "podcast": {
+            "title": "Podcast",
+            "description": "Design of a podcast system with music control."
+        },
+        "feedback": {
+            "title": "Feedback",
+            "description": "Message feedback system design."
+        },
+        "move-it": {
+            "title": "Move It",
+            "description": "Notification system to students or workers, to take a break and exercise."
+        },
+        "messages": {
+            "title": "Messages",
+            "description": "Message system design."
+        }
+    },
+    "header": {
+        "home": "home",
+        "about": "about",
+        "portfolio": "portfolio"
     }
 }
