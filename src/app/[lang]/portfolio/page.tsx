@@ -29,7 +29,7 @@ export default async function Portfolio ({
             <Card tags={['Nextjs','ChakraUI']} title={dictionary.portfolio["reddit-clone"].title} description={dictionary.portfolio["reddit-clone"].description} img={RedditClone} alt="RedditClone" href="https://reddit-clone-nextjs-firebase-gamma.vercel.app/" />
             <Card tags={['Nextjs','ChakraUI']} title={dictionary.portfolio.portfolio.title} description={dictionary.portfolio.portfolio.description} img={PortfolioImg} alt="Portfolio" href="https://kevincruz.vercel.app/" />
             <Card tags={['Nextjs','ChakraUI']} title={dictionary.portfolio["move-it"].title} description={dictionary.portfolio["move-it"].description} img={MoveIt} alt="MoveIt" href="https://moveit-kevinmcruzp.vercel.app/" />
-            <Card tags={['Nextjs','ChakraUI']} title={dictionary.portfolio.feedback.title} description={dictionary.portfolio.feedback.description} img={MoveIt} alt="MoveIt" href="https://moveit-kevinmcruzp.vercel.app/" />
+            <Card tags={['Nextjs','Tailwind']} title={dictionary.portfolio.feedback.title} description={dictionary.portfolio.feedback.description} img={Feedback} alt="Feedback" href="https://moveit-kevinmcruzp.vercel.app/" />
         </section>
     )
 }
