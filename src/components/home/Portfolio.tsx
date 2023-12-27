@@ -1,21 +1,20 @@
 import Image from "next/image";
-import { RiArrowRightSLine } from "react-icons/ri";
 import projectsCard from '@/public/img/ProjectsCard.png'
 import { Locale } from "@/i18n-config";
 import { getDictionary } from "@/src/get-dictionary";
+import { Icons } from "@/src/assets/icons";
 
 export default async function Portfolio ( {lang} : {lang: Locale}) {
-    console.log(lang)
 
     const dictionary = await getDictionary(lang)
 
     return (
         <div className="grid grid-cols-1 grid-rows-6 p-2 md:grid-cols-2">
-            <div className="col-span-2 row-span-1 flex justify-center items-center">
-                <span className='text-3xl md:text-5xl font-medium'>{dictionary.home[2].project.title}</span>
+            <div className="col-span-2 row-span-1 flex justify-start items-center">
+                <span className='text-xl md:text-2xl font-bold'>{dictionary.home[2].project.title}</span>
             </div>
-            <div className="row-span-5 w-full h-full flex flex-col gap-6 justify-center items-start">
-                <span className="text-xl md:text-2xl font-normal">
+            <div className="row-span-5 w-full h-full flex flex-col gap-7 justify-center items-start">
+                <span className="text-base font-medium">
                     {dictionary.home[2].project.subtitle}
                 </span>
                 <span className="font-normal text-xs md:text-sm text-secondary">
@@ -23,14 +22,14 @@ export default async function Portfolio ( {lang} : {lang: Locale}) {
                 </span>
                 <div className="w-full flex justify-end">
                     <button className="
-                        w-40 md:w-48 flex items-center justify-center gap-4 p-2
-                        border-b-[1px] border-divider text-secondary
+                        flex items-center justify-center gap-3 text-sky-600
                     ">
-                        <span className="text-sm md:text-base font-normal">{dictionary.home[2].project.button}</span>
-                        <RiArrowRightSLine size={26} />
+                        <span className="text-xs md:text-sm font-medium">{dictionary.home[2].project.button}</span>
+                        <Icons.ArrowRight size={26} />
                     </button>
                 </div>
             </div>
+
             <div className="
                 row-span-5 w-full h-full justify-center items-center hidden md:flex
             ">

@@ -4,13 +4,10 @@ import Main from '@/src/components/home/Main'
 import Portfolio from '@/src/components/home/Portfolio'
 import ShapeDivider from '@/src/components/home/ShapeDivider'
 import { Locale } from '@/i18n-config'
-import { getDictionary } from '@/src/get-dictionary'
 
 export default function Home ({
   params: { lang },
 }: {params: {lang: Locale}}) {
-
-  console.log(lang)
 
   return (
     <div className='h-full w-full '>

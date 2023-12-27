@@ -1,5 +1,5 @@
 import { BsWhatsapp } from "react-icons/bs";
-import { FiCommand, FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiCommand, FiGithub, FiLinkedin, FiDownload } from "react-icons/fi";
 import { GiAlienBug } from "react-icons/gi";
 import { GrInstagram } from "react-icons/gr";
 import { IoLogoNodejs, IoRocketSharp } from "react-icons/io5";
@@ -41,4 +41,5 @@ export const Icons = {
   Alien: GiAlienBug,
   SmileIcon: RiChatSmile2Line,
   SmileIcon2: RiChatSmile3Line,
+  Download: FiDownload,
 };

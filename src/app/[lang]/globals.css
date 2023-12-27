@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes rgbAnimation {
+    0% { background-position: 200% 0%; }
+    100% { background-position: -200% 0%; }
+}
+  
+.animate-rgb {
+    animation: rgbAnimation 10s linear infinite;
+}
+
+.bg-gradient {
+    background: linear-gradient(to right, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 200% 100%;
+    animation: rgbAnimation 10s linear infinite;
+}

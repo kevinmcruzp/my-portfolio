@@ -9,14 +9,14 @@
                 "title": "About me",
                 "subtitle": "Im Engineer Computer, web Developer having 1 years of experience.",
                 "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore unde commodi eius dignissimos expedita, amet quae, cumque non accusamus incidunt possimus nemo optio asperiores, culpa doloribus saepe provident nulla ut.",
-                "button": "LEARN MORE",
-                "download": "DOWNLOAD MY CV"
+                "button": "Learn more",
+                "download": "Download CV"
             },
             "project": {
                 "title": "Projects",
                 "subtitle": "My works",
                 "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore unde commodi eius dignissimos expedita, amet quae, cumque non accusamus incidunt possimus nemo optio asperiores, culpa doloribus saepe provident nulla ut.",
-                "button": "PORTFOLIO"
+                "button": "Projects"
             }
         },
         "3": {
