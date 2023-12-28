@@ -8,8 +8,8 @@ export default async function About ( {lang} : {lang: Locale}) {
     const dictionary = await getDictionary(lang)
 
     return ( 
-        <div className="flex border-b-[1px] border-divider">
-            <div className="w-full h-full flex flex-col gap-4 justify-center items-start">
+        <div className="flex-1 flex border-b-[1px] border-divider">
+            <div className="flex flex-col gap-4 justify-center items-start">
                 <RevealWithBackground>
                     <span className='text-xl md:text-2xl font-bold'>{dictionary.home[2].about.title}</span>
                 </RevealWithBackground>

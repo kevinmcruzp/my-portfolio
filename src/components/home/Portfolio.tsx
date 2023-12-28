@@ -10,8 +10,8 @@ export default async function Portfolio ( {lang} : {lang: Locale}) {
     const dictionary = await getDictionary(lang)
 
     return (
-        <div className="flex">
-            <div className="w-full h-full flex flex-col gap-4 justify-center items-start">
+        <div className="flex-1 flex">
+            <div className="flex flex-col gap-4 justify-center items-start">
                 <RevealWithBackground>
                     <span className='text-xl md:text-2xl font-bold'>{dictionary.home[2].project.title}</span>
                 </RevealWithBackground>

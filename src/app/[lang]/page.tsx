@@ -24,7 +24,7 @@ export default function Home ({
         </RevealLeftToRight>
 
         <div className='flex flex-1 w-full bg-bg_secondary p-2'>
-          <div className='max-w-screen-xl m-auto h-full w-full grid grid-rows-2'>
+          <div className='max-w-screen-xl mx-auto flex flex-col'>
             <About lang={lang} />
             <Portfolio lang={lang} />
           </div>
