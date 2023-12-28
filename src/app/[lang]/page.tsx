@@ -4,6 +4,9 @@ import Main from '@/src/components/home/Main'
 import Portfolio from '@/src/components/home/Portfolio'
 import ShapeDivider from '@/src/components/home/ShapeDivider'
 import { Locale } from '@/i18n-config'
+import RevealWithBackground from '@/src/components/utils/RevealWithBackground'
+import RevealLeftToRight from '@/src/components/utils/RevealLeftToRight'
+import ContactMeFooter from '@/src/components/home/ContactMeFooter'
 
 export default function Home ({
   params: { lang },
@@ -12,22 +15,24 @@ export default function Home ({
   return (
     <div className='h-full w-full '>
       <section className='h-screen w-full max-w-screen-xl m-auto'>
-        <Main lang={lang} />
+          <Main lang={lang} />
       </section>
       
       <section className='min-h-screen w-full bg-bg flex flex-col'>
+        <RevealLeftToRight>
           <ShapeDivider />
+        </RevealLeftToRight>
 
-          <div className='flex flex-1 w-full bg-bg_secondary'>
-              <div className='max-w-screen-xl m-auto h-full w-full grid grid-rows-2'>
-                <About lang={lang} />
-                <Portfolio lang={lang} />
-              </div>
+        <div className='flex flex-1 w-full bg-bg_secondary p-2'>
+          <div className='max-w-screen-xl m-auto h-full w-full grid grid-rows-2'>
+            <About lang={lang} />
+            <Portfolio lang={lang} />
           </div>
+        </div>
       </section>
-      <footer className='h-[534px] w-full max-w-screen-xl m-auto'>
-        <Footer lang={lang} />
-      </footer>
+
+      <ContactMeFooter lang={lang} />
+      
     </div>
   )
 }
