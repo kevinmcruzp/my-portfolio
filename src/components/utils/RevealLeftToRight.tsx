@@ -5,10 +5,10 @@ import { motion, useInView, useAnimation } from 'framer-motion'
 
 type RevealLeftToRightProps = {
     children: JSX.Element | ReactNode
-    width?: '100%' | 'fit-content'
+    width?: 'w-full' | 'w-fit'
 }
 
-export default function RevealLeftToRight({children, width = 'fit-content'}: RevealLeftToRightProps) {
+export default function RevealLeftToRight({children, width = 'w-fit'}: RevealLeftToRightProps) {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })
 

@@ -5,10 +5,10 @@ import { motion, useInView, useAnimation } from 'framer-motion'
 
 type RevealWithBackgroundProps = {
     children: JSX.Element | ReactNode
-    width?: '100%' | 'fit-content'
+    width?: 'w-full' | 'w-fit'
 }
 
-export default function RevealWithBackground({children, width = 'fit-content'}: RevealWithBackgroundProps) {
+export default function RevealWithBackground({children, width = 'w-fit'}: RevealWithBackgroundProps) {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })
 

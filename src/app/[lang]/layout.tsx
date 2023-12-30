@@ -39,7 +39,7 @@ export default function RootLayout({
 
               {children}
 
-              <RevealLeftToRight>
+              <RevealLeftToRight width='w-full'>
                 <Footer lang={params.lang}/>
               </RevealLeftToRight>
               

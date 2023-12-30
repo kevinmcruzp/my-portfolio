@@ -24,7 +24,7 @@ export default function Footer ({lang} : {lang: Locale} ) {
                     <Image src={instagram} alt="instagram" width={22} height={22} />
                 </Link>
                 <Link href='/'>
-                    <Icons.Github fill="#fff" size={22} />
+                    <Icons.Github size={22} />
                 </Link>
                 <Link href='/'>
                     <Image src={whatsapp} alt="whatsapp" width={22} height={22} />

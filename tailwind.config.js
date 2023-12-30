@@ -1,4 +1,22 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require('tailwindcss/plugin')
+
+// Rotate X utilities
+const rotateY = plugin(function ({ addUtilities }) {
+  addUtilities({
+    '.rotate-y-25': {
+      transform: 'rotate3d(0, 1, 0, 25deg)',
+    },
+    '.rotate-y--25': {
+      transform: 'rotate3d(0, 1, 0, -25deg)',
+    },
+    '.perspective': {
+      perspective: '1000px',
+    }
+  })
+})
+
 module.exports = {
   darkMode: 'class',
   content: [
@@ -25,5 +43,5 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [rotateY],
 }
