@@ -5,12 +5,21 @@ import RevealLeftToRight from '@/src/components/utils/RevealLeftToRight'
 import ContactMeFooter from '@/src/components/home/ContactMeFooter'
 import { Icons } from '@/src/assets/icons'
 import CardProject from '@/src/components/CardProject'
+import MoveIt from '@/public/img/Moveit.png'
+import Feedback from '@/public/img/Feedback.png'
+import Podcastr from '@/public/img/Podcastr.png'
+import RedditClone from '@/public/img/RedditClone.png'
+import Dashadmin from '@/public/img/Dashadmin.png'
+import PortfolioImg from '@/public/img/Portfolio.png'
+import MessageImg from '@/public/img/Message.png'
+import { getDictionary } from '@/src/get-dictionary'
 
 
-export default function Home ({
+export default async function Home ({
   params: { lang },
 }: {params: {lang: Locale}}) {
 
+  const dictionary = await getDictionary(lang)
 
   return (
     <div className='h-full w-full '>
@@ -58,9 +67,9 @@ export default function Home ({
               </div>
             </div> */}
 
-            <CardProject />
-            <CardProject imgPosition='left' />
-            <CardProject />
+            <CardProject title={dictionary.portfolio.podcast.title} description={dictionary.portfolio.podcast.description} img={Podcastr} pageURL='https://podcastr-next-kevinmcruzp.vercel.app/' sourceCodeURL='https://github.com/KevinMCruzP/podcastr-next' />
+            <CardProject title={dictionary.portfolio['reddit-clone'].title} description={dictionary.portfolio['reddit-clone'].description} img={RedditClone} pageURL='https://reddit-clone-nextjs-firebase-gamma.vercel.app/' sourceCodeURL='https://github.com/KevinMCruzP/Reddit_Clone-Nextjs-Firebase' imgPosition='left' />
+            <CardProject title={dictionary.portfolio['dash-admin'].title} description={dictionary.portfolio['dash-admin'].description} img={Dashadmin} pageURL='https://dashadmin-kevinmcruzp.vercel.app/dashboard' sourceCodeURL='https://github.com/KevinMCruzP/dashadmin' />
 
           </div>
 

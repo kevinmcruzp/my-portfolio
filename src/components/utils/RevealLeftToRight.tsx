@@ -24,7 +24,7 @@ export default function RevealLeftToRight({children, width = 'w-fit'}: RevealLef
     }, [isInView])
 
     return (
-        <div ref={ref} className={`relative overflow-hidden ${width}`}>
+        <div ref={ref} className={`relative overflow-hidden my-auto ${width}`}>
             <motion.div
                 variants={{
                     hidden: {opacity: 0, x: -900},

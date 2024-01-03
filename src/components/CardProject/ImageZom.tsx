@@ -4,7 +4,12 @@ import * as React from "react";
 import { useState, useRef, useEffect } from "react";
 import { motion, useDomEvent } from "framer-motion";
 import Podcastr from '@/public/img/Podcastr.png'
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+
+type ImageMotionProps = {
+    imgPosition?: "left" | "right";
+    img: StaticImageData;
+}
 
 const transition = {
     type: "spring",
@@ -12,16 +17,13 @@ const transition = {
     stiffness: 120
 };
 
-export default function ImageZom({imgPosition = 'right'}: {imgPosition?: "left" | "right"}) {
+export default function ImageMotion({ imgPosition = "right", img }: ImageMotionProps) {
     const [isOpen, setOpen] = useState(false);
     
     useDomEvent(useRef(typeof window !== 'undefined' ? window :  null), "scroll", () => isOpen && setOpen(false));
 
-    // rounded-lg
-    //                     ${isOpen ? "h-full object-contain" : "rotate-y-50 object-contain lg:max-w-md"}
-
     return (
-        <div className={`relative cursor-zoom-in hidden md:flex md:justify-end h-72 ${isOpen ? "cursor-zoom-out" : ""}`}>
+        <div className={`relative hidden md:flex md:justify-end h-72`}>
             <motion.div
                 animate={{ opacity: isOpen ? 1 : 0 }}
                 transition={transition}
@@ -42,11 +44,11 @@ export default function ImageZom({imgPosition = 'right'}: {imgPosition?: "left" 
                 `}
             >
                 <Image
-                    src={Podcastr}
+                    src={img}
                     alt='podcast' 
                     className={`
-                        rounded-lg object-contain
-                        ${isOpen ? "h-full" : `lg:max-w-md ${imgPosition == 'right' ? 'rotate-y-25' : 'rotate-y--25'}`}
+                        rounded-lg object-contain shadow-lg my-auto cursor-zoom-in
+                        ${isOpen ? "h-full cursor-zoom-out" : `lg:max-w-md hover:rotate-y-0 hover:scale-105 hover:z-10 hover:transition-all hover:duration-500 ${imgPosition == 'right' ? 'rotate-y-25' : 'rotate-y--25'}`}
                     `} 
                     onClick={() => setOpen(!isOpen)}
                     width={isOpen ? 0 : 400}
