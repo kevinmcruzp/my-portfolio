@@ -8,7 +8,7 @@ import linkedin from '@/public/img/icon-linkedin.svg'
 import whatsapp from '@/public/img/icon-whatsapp.svg'
 
 
-export default function Footer ({lang} : {lang: Locale} ) {
+export default function Footer () {
 
     return (
         <div className="h-12 w-full max-w-screen-xl m-auto border-t-[1px] border-divider p-2 flex items-center justify-between mt-10">
@@ -17,16 +17,16 @@ export default function Footer ({lang} : {lang: Locale} ) {
             </div>
 
             <div className="flex gap-3">
-                <Link href='/'>
+                <Link target="_blank" href='https://www.linkedin.com/in/kevinmcruzp/'>
                     <Image src={linkedin} alt="linkedin" width={22} height={22} />
                 </Link>
-                <Link href='/'>
+                <Link target="_blank" href='https://www.instagram.com/kevin.pizarro.cruz/'>
                     <Image src={instagram} alt="instagram" width={22} height={22} />
                 </Link>
-                <Link href='/'>
+                <Link target="_blank" href='https://github.com/KevinMCruzP'>
                     <Icons.Github size={22} />
                 </Link>
-                <Link href='/'>
+                <Link target="_blank" href='https://wa.me/56921843543'>
                     <Image src={whatsapp} alt="whatsapp" width={22} height={22} />
                 </Link>
             </div>

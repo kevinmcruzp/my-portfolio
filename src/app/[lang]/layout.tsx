@@ -6,7 +6,7 @@ import { ReactNode } from 'react'
 import Providers from '../../components/Providers'
 import { Locale, i18n } from '../../../i18n-config'
 import RevealLeftToRight from '@/src/components/utils/RevealLeftToRight'
-import Footer from '@/src/components/home/Footer'
+import Footer from '@/src/components/Footer'
 
 export async function generateStaticParams() {
   return i18n.locales.map(locale => ({lang: locale}))
@@ -40,7 +40,7 @@ export default function RootLayout({
               {children}
 
               <RevealLeftToRight width='w-full'>
-                <Footer lang={params.lang}/>
+                <Footer />
               </RevealLeftToRight>
               
             </div>
