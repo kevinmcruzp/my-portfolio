@@ -16,3 +16,8 @@
     background-size: 200% 100%;
     animation: rgbAnimation 10s linear infinite;
 }
+
+td {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}

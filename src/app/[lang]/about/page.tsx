@@ -3,6 +3,8 @@ import { getDictionary } from "@/src/get-dictionary";
 import Image from "next/image";
 import AvatarKevin from '@/public/img/Avatar.png'
 import { Icons } from "@/src/assets/icons";
+import RevealWithBackground from "@/src/components/utils/RevealWithBackground";
+import RevealLeftToRight from "@/src/components/utils/RevealLeftToRight";
 
 export default async function About({
     params: { lang },
@@ -22,67 +24,81 @@ export default async function About({
                     />
                 </div>
             </div>
-            <div className="flex flex-col justify-center gap-5 md:w-1/2">
-                <span className="text-base md:text-lg font-light">{dictionary.about["pre-title"]}</span>
-                <span className="text-xl md:text-3xl font-normal">
-                    {dictionary.about.title}
-                </span>
-                <p className="text-sm md:text-base font-light text-secondary">
-                    {dictionary.about.description}
-                </p>
-                <div className="flex flex-col gap-1">
-                    <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"]["full-name"]}</span>
-                            <span className="text-sm md:text-base font-normal text-secondary">Kevin Cruz</span>
-                    </div>
-                    <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"].age}</span>
-                            <span className="text-sm md:text-base font-normal text-secondary">25/02/1996</span>
-                    </div>
-                    
-                    <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"].address}</span>
-                            <span className="text-sm md:text-base font-normal text-secondary">La Serena, Coquimbo, Chile.</span>
-                    </div>
-                    <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"].email}</span>
-                            <span className="text-sm md:text-base font-normal text-secondary">kevin_mcp@outlook.com</span>
-                    </div>
-                    <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"].whatsapp}</span>
-                            <span className="text-sm md:text-base font-normal text-secondary"></span>
-                    </div>
-                    <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"]["social-media"]}</span>
-                            <span className="text-sm md:text-base font-normal text-secondary"></span>
-                    </div>
-                    <div className="flex gap-4">
-                            <span className="text-sm md:text-base font-normal">{dictionary.about["personal-information"].repository}</span>
-                            <span className="text-sm md:text-base font-normal text-secondary"></span>
-                    </div>
+
+            <div className="flex flex-col justify-center gap-6 md:w-1/2">
+                
+                <div className="flex flex-col justify-center gap-3">
+                    <RevealWithBackground>
+                        <span>{dictionary.about["pre-title"]}</span>
+                    </RevealWithBackground>
+
+                    <RevealWithBackground>
+                        <span className="text-xl font-medium">
+                            {dictionary.about.title} 🤖
+                        </span>
+                    </RevealWithBackground>
+
+                    <RevealWithBackground>
+                        <p className="text-sm font-light text-secondary">
+                            {dictionary.about.description}
+                        </p>
+                    </RevealWithBackground>
                 </div>
-                <div className="flex w-full justify-center md:justify-start gap-3">
-                    <Icons.JavaScript color="#EFD81D" size="23px" />
 
-                    <Icons.Typescript color="#2F74C0" size="23px" />
-
-                    <Icons.React color="#61DAFB" size="23px" />
-
-                    <Icons.Nextjs size="23px" />
-
-                    <Icons.Nodejs color="#6EA560" size="23px" />
-
-                    <Icons.Linux size="23px" />
-
-                    <Icons.Git color="#E84E31" size="23px" />
-
-                    <Icons.Html5 color="#F16524" size="23px" />
-
-                    <Icons.Css3 color="#00A2D6" size="23px" />
+                <RevealWithBackground width="w-full">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td className="text-xs text-secondary pr-7">{dictionary.about["personal-information"]["full-name"].toUpperCase()}</td>
+                                <td className="text-sm font-light text-primary">Kevin Cruz</td>
+                            </tr>
+                            <tr>
+                                <td className="text-xs text-secondary">{dictionary.about["personal-information"]["age"].toUpperCase()}</td>
+                                <td className="text-sm font-light text-primary">25/02/1996</td>
+                            </tr>
+                            <tr>
+                                <td className="text-xs text-secondary">{dictionary.about["personal-information"]["address"].toUpperCase()}</td>
+                                <td className="text-sm font-light text-primary">La Serena, Coquimbo, Chile</td>
+                            </tr>
+                            <tr>
+                                <td className="text-xs text-secondary">{dictionary.about["personal-information"]["email"].toUpperCase()}</td>
+                                <td className="text-sm font-light text-primary">kevin_mcp@outlook.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </RevealWithBackground>
+                
+                <div className="w-full flex items-center justify-end">
+                    <RevealLeftToRight>
+                        <button className="flex items-center gap-3 px-9 py-2 bg-sky-800 rounded-lg text-sm font-medium hover:opacity-90">
+                            {dictionary.home[2].about.download}    
+                            <Icons.Download size={20} />
+                        </button>
+                    </RevealLeftToRight>
                 </div>
-                <button className="w-fit p-3 md:p-4 border-[1px] border-primary rounded-xl text-xs md:text-base font-normal mx-auto">
-                    {dictionary.about.button}
-                </button>
+
+                
+                <RevealLeftToRight width='w-full'>
+                    <div className="flex w-full justify-center gap-3 md:justify-between">
+                            <Icons.JavaScript color="#EFD81D" size="26px" />
+
+                            <Icons.Typescript color="#2F74C0" size="26px" />
+
+                            <Icons.React color="#61DAFB" size="26px" />
+
+                            <Icons.Nextjs size="26px" />
+
+                            <Icons.Nodejs color="#6EA560" size="26px" />
+
+                            <Icons.Linux size="26px" />
+
+                            <Icons.Git color="#E84E31" size="26px" />
+
+                            <Icons.Html5 color="#F16524" size="26px" />
+
+                            <Icons.Css3 color="#00A2D6" size="26px" />
+                    </div>
+                </RevealLeftToRight>
             </div>
         </section>
     )

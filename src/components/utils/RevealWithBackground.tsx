@@ -45,7 +45,7 @@ export default function RevealWithBackground({children, width = 'w-fit'}: Reveal
                 initial='hidden'
                 animate={slideControls}
                 transition={{duration: 0.5, ease: 'easeIn'}}
-                className='absolute top-1 bottom-1 left-0 right-0 bg-sky-700 z-20 '
+                className='absolute top-1 bottom-1 left-0 right-0 bg-sky-700 z-20'
             >
             </motion.div>
         </div>

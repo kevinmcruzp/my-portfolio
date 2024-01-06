@@ -45,28 +45,6 @@ export default async function Home ({
               </span>
             </div>
 
-            {/* <div className='grid grid-cols-2'>   
-              <Image src={Podcastr} alt='podcast' className='rounded-lg max-w-md' />
-
-              <div className='flex flex-col items-end justify-center gap-3'>
-                <span className='text-lg font-semibold'>Podcastr</span>
-
-                <p className='text-sm font-medium text-gray-400 text-end max-w-md'>Podcastr is a platform built for podcast broadcasting.aaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-
-                <div className='flex gap-2'>
-                  <button className='flex items-center gap-3 px-9 py-2 bg-sky-800 rounded-lg text-sm font-medium hover:opacity-90'>
-                    <Icons.ArrowUpRight className='w-4 h-4' />
-                    Visit
-                  </button>
-
-                  <button className='flex items-center gap-3 px-9 py-2 rounded-lg border-[1px] border-gray-700 text-sm font-medium hover:opacity-90'>
-                    <Icons.Github className='w-4 h-4' />
-                    Source-Code
-                  </button>  
-                </div>
-              </div>
-            </div> */}
-
             <CardProject title={dictionary.portfolio.podcast.title} description={dictionary.portfolio.podcast.description} img={Podcastr} pageURL='https://podcastr-next-kevinmcruzp.vercel.app/' sourceCodeURL='https://github.com/KevinMCruzP/podcastr-next' />
             <CardProject title={dictionary.portfolio['reddit-clone'].title} description={dictionary.portfolio['reddit-clone'].description} img={RedditClone} pageURL='https://reddit-clone-nextjs-firebase-gamma.vercel.app/' sourceCodeURL='https://github.com/KevinMCruzP/Reddit_Clone-Nextjs-Firebase' imgPosition='left' />
             <CardProject title={dictionary.portfolio['dash-admin'].title} description={dictionary.portfolio['dash-admin'].description} img={Dashadmin} pageURL='https://dashadmin-kevinmcruzp.vercel.app/dashboard' sourceCodeURL='https://github.com/KevinMCruzP/dashadmin' />

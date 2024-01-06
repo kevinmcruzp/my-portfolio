@@ -44,7 +44,7 @@ export default function CardProject(
                     <RevealWithBackground>
                         <div className='flex gap-2'>
                             <Link href={pageURL} target="_blank" className='flex items-center gap-3 px-9 py-2 bg-sky-800 rounded-lg text-sm font-medium hover:opacity-90'>
-                            <Icons.ArrowUpRight className='w-4 h-4' />
+                                <Icons.ArrowUpRight className='w-4 h-4' />
                                 Visit
                             </Link>
 
