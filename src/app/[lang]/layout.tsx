@@ -39,9 +39,7 @@ export default function RootLayout({
 
               {children}
 
-              <RevealLeftToRight width='w-full'>
-                <Footer />
-              </RevealLeftToRight>
+              <Footer />
               
             </div>
           </Providers>

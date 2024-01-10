@@ -16,9 +16,14 @@ export default function RevealLeftToRight({children, width = 'w-fit'}: RevealLef
     const slideControls = useAnimation()
 
     useEffect(() => {
+
+        console.log(isInView)
         if (isInView) {
             mainControls.start('visible')
             slideControls.start('visible')
+        } else {
+            mainControls.start('hidden')
+            slideControls.start('hidden')
         }
 
     }, [isInView])
@@ -27,7 +32,7 @@ export default function RevealLeftToRight({children, width = 'w-fit'}: RevealLef
         <div ref={ref} className={`relative overflow-hidden ${width}`}>
             <motion.div
                 variants={{
-                    hidden: {opacity: 0, x: -900},
+                    hidden: {opacity: 0, x: -500},
                     visible: {opacity: 1, x: 0},
                 }}
                 initial='hidden'

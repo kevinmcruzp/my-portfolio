@@ -13,6 +13,7 @@ import Dashadmin from '@/public/img/Dashadmin.png'
 import PortfolioImg from '@/public/img/Portfolio.png'
 import MessageImg from '@/public/img/Message.png'
 import { getDictionary } from '@/src/get-dictionary'
+import RevealBottomToTop from '@/src/components/utils/RevealBottomToTop'
 
 
 export default async function Home ({
@@ -30,9 +31,9 @@ export default async function Home ({
       </RevealLeftToRight>
       
       <section className='min-h-screen w-full bg-bg flex flex-col'>
-        <RevealLeftToRight width='w-full'>
+        <RevealBottomToTop width='w-full'>
           <ShapeDivider />
-        </RevealLeftToRight>
+        </RevealBottomToTop>
 
         <div className='flex flex-1 w-full bg-bg_secondary'>
 
