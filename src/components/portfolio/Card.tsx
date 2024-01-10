@@ -1,51 +1,67 @@
-import { Icons } from "@/src/assets/icons";
-import Image, { StaticImageData } from "next/image";
+'use client'
 
-type CardProps = {
-    img: StaticImageData
-    alt: string,
-    title: string,
-    description: string,
-    tags: string[],
-    href: string
-}
+import { motion, Variants } from "framer-motion";
+import CardItem from "./CardItem";
+import { cards } from "@/src/card-data";
 
-export default function Card ({ img, title, description, tags, alt, href }: CardProps) {
+
+const cardSectionTitleVariants: Variants = {
+  hidden: {
+    opacity: 0
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      delay: 0.2
+    }
+  }
+};
+
+const cardsContainerVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.7,
+      staggerChildren: 0.5
+    }
+  }
+};
+
+export default function Card({ dictionary } : {dictionary: any}) {    
     return (
-        <div className="border border-gray-800 rounded overflow-hidden shadow-lg h-fit mx-auto md:mx-0">
-            <a
-                href={href}
-                target="_blank"
-                className="relative group"
+        <div
+            className="flex flex-col items-center justify-center h-full"
+        >
+            {/* Cards section title */}
+            <motion.div
+                variants={cardSectionTitleVariants}
+                initial="hidden"
+                whileInView="show"
+                className="h-16 w-full flex items-center justify-center"
             >
-                <div className="aspect-w-4 aspect-h-3">
-                    <Image src={img} alt={alt} className="group-hover:opacity-50 transition-opacity duration-300 object-cover w-full h-full" />
-                </div>
-                <div className="absolute top-1/2 right-2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Icons.ArrowRight
-                        className="transition-transform duration-300 transform translate-x-full group-hover:translate-x-0"
-                        fill="white"
-                        size={40}
-                    />
-                </div>
-            </a>
+                <span className="text-center text-2xl font-semibold">
+                    My Projects 🚀
+                </span>
+            </motion.div>
 
-            <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{title}</div>
-                <p className="text-gray-700 text-base">
-                    {description}
-                </p>
-            </div>
-            <div className="px-6 pt-4 pb-2">
-                {tags?.map((tag, index) => (
-                    <span
-                    key={index}    
-                    className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-                >
-                    {tag}
-                    </span>
-                ))}
-            </div>
+            {/* Cards Container */}
+            <motion.div
+                variants={cardsContainerVariants}
+                className="
+                    grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5
+                    xl:gap-8
+                "
+                initial="hidden"
+                whileInView="show"
+            >
+                {cards.map((card) => {
+                    return (
+                        <CardItem key={card.title} card={card} description={dictionary.portfolio[card.key].description} />
+                    );
+                })}
+            </motion.div>
         </div>
-    )
+    );
 }

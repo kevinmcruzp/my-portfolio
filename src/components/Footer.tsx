@@ -11,7 +11,7 @@ import whatsapp from '@/public/img/icon-whatsapp.svg'
 export default function Footer () {
 
     return (
-        <div className="h-12 w-full max-w-screen-xl m-auto border-t-[1px] border-divider p-2 flex items-center justify-between mt-10">
+        <div className="h-12 w-full max-w-screen-xl m-auto border-t-[1px] border-divider p-2 flex items-center justify-between mt-10 bottom-0">
             <div className="flex gap-3">
                 <span className="text-sm text-gray-500">Created by Kevin Cruz</span>
             </div>
