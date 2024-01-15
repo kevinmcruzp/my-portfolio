@@ -4,8 +4,8 @@ import Image from "next/image";
 import AvatarKevin from '@/public/img/Avatar.png'
 import { Icons } from "@/src/assets/icons";
 import RevealWithBackground from "@/src/components/utils/RevealWithBackground";
-import RevealLeftToRight from "@/src/components/utils/RevealLeftToRight";
 import RevealBottomToTop from "@/src/components/utils/RevealBottomToTop";
+import Tooltip from "@/src/components/utils/Tooltip";
 
 export default async function About({
     params: { lang },
@@ -80,25 +80,43 @@ export default async function About({
                 </div>
             </div>
 
-            <RevealBottomToTop width='w-full'>
-                <div className="flex w-full justify-center gap-10">
-                        <Icons.JavaScript color="#EFD81D" size="26px" />
+            <RevealBottomToTop width="w-full">
+                <div className="flex w-full justify-center gap-10 h-auto">
+                        <Tooltip text="JavaScript">
+                            <Icons.JavaScript color="#EFD81D" size="26px" />
+                        </Tooltip>
 
-                        <Icons.Typescript color="#2F74C0" size="26px" />
+                        <Tooltip text="TypeScript">
+                            <Icons.Typescript color="#2F74C0" size="26px" />
+                        </Tooltip>
 
-                        <Icons.React color="#61DAFB" size="26px" />
+                        <Tooltip text="ReactJS">
+                            <Icons.React color="#61DAFB" size="26px" />
+                        </Tooltip>
 
-                        <Icons.Nextjs size="26px" />
+                        <Tooltip text="NextJS">
+                            <Icons.Nextjs size="26px" />
+                        </Tooltip>
 
-                        <Icons.Nodejs color="#6EA560" size="26px" />
+                        <Tooltip text="NodeJS">
+                            <Icons.Nodejs color="#6EA560" size="26px" />
+                        </Tooltip>
 
-                        <Icons.Linux size="26px" />
+                        <Tooltip text="Linux">
+                            <Icons.Linux size="26px" />
+                        </Tooltip>
 
-                        <Icons.Git color="#E84E31" size="26px" />
+                        <Tooltip text="Git">
+                            <Icons.Git color="#E84E31" size="26px" />
+                        </Tooltip>
 
-                        <Icons.Html5 color="#F16524" size="26px" />
+                        <Tooltip text="Html5">
+                            <Icons.Html5 color="#F16524" size="26px" />
+                        </Tooltip>
 
-                        <Icons.Css3 color="#00A2D6" size="26px" />
+                        <Tooltip text="Css3">
+                            <Icons.Css3 color="#00A2D6" size="26px" />
+                        </Tooltip>
                 </div>
             </RevealBottomToTop>
             
