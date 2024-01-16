@@ -32,7 +32,7 @@ export default async function About({
 
                 <div className="flex flex-col justify-center gap-6 md:w-1/2">
                     <div className="flex flex-col justify-center gap-3">
-                        <RevealWithBackground>
+                    <RevealWithBackground>
                             <span>{dictionary["page-about"].title}</span>
                         </RevealWithBackground>
 

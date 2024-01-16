@@ -4,6 +4,8 @@
         "subtitle": "Sou um Engenheiro de Software",
         "description": "Nasci em Carambeí, Brasil, atualmente vivendo e trabalhando em Londrina, Paraná. Com habilidades destacadas em ReactJS, NextJS, TypeScript, NodeJS, e mais, sou apaixonado por inovação e tecnologias emergentes. Conheça-me mais enquanto navegamos pelo fascinante mundo do desenvolvimento de software! 🚀",
         "project": {
+            "title": "Meus projetos",
+            "see-more": "Ver mais...",
             "podcast": {
                 "title": "Podcast",
                 "description": "Design de um sistema de podcast com controle de música, usando NextJS, ChakraUI e mais..."
@@ -71,9 +73,9 @@
         }
     },
     "header": {
-        "home": "início",
-        "about": "sobre",
-        "portfolio": "portfólio"
+        "home": "Início",
+        "about": "Sobre",
+        "portfolio": "Portfólio"
     },
     "footer": {
         "created-by": "Criado por Kevin Cruz"

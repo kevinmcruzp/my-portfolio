@@ -37,12 +37,12 @@ export default async function RootLayout({
             <div className='min-h-screen min-w-full flex flex-col bg-primary dark:bg-bg dark:text-primary'>
               
               <div className='w-full border-b border-divider'>
-                <Header dictionary={dictionary} />
+                <Header lang={params.lang} dictionary={dictionary} />
               </div>
 
               {children}
 
-              <Footer />
+              <Footer dictionary={dictionary} />
               
             </div>
           </Providers>

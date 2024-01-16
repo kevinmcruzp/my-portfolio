@@ -5,24 +5,19 @@ import RevealLeftToRight from '@/src/components/utils/RevealLeftToRight'
 import ContactMeFooter from '@/src/components/home/ContactMeFooter'
 import { Icons } from '@/src/assets/icons'
 import CardProject from '@/src/components/CardProject'
-import MoveIt from '@/public/img/Moveit.png'
-import Feedback from '@/public/img/Feedback.png'
 import Podcastr from '@/public/img/Podcastr.png'
 import RedditClone from '@/public/img/RedditClone.png'
 import Dashadmin from '@/public/img/Dashadmin.png'
-import PortfolioImg from '@/public/img/Portfolio.png'
-import MessageImg from '@/public/img/Message.png'
 import { getDictionary } from '@/src/get-dictionary'
 import RevealBottomToTop from '@/src/components/utils/RevealBottomToTop'
 import Link from 'next/link'
-
 
 export default async function Home ({
   params: { lang },
 }: {params: {lang: Locale}}) {
 
   const dictionary = await getDictionary(lang)
-
+  
   return (
     <div className='h-full w-full '>
       <RevealLeftToRight width='w-full'>
@@ -40,9 +35,9 @@ export default async function Home ({
 
           <div className='w-full max-w-screen-lg mx-auto flex flex-col px-2 py-8 gap-5'>
             <div className='flex justify-between'>
-              <span className='text-lg font-medium'>📂 My projects</span>
-              <Link href='/about' className='flex text-xs font-semibold items-center text-sky-700 cursor-pointer hover:opacity-90'>
-                See all
+              <span className='text-lg font-medium'>📂 { dictionary['page-home'].project.title }</span>
+              <Link href={`/${lang}/portfolio`} className='flex text-xs font-semibold items-center text-sky-700 cursor-pointer hover:opacity-90'>
+                {dictionary['page-home'].project['see-more']}
                 <Icons.ArrowRight className='w-4 h-4' />
               </Link>
             </div>
@@ -56,7 +51,7 @@ export default async function Home ({
         </div>
       </section>
 
-      <ContactMeFooter lang={lang} />
+      <ContactMeFooter dictionary={dictionary} />
       
     </div>
   )

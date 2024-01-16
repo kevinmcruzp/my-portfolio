@@ -7,13 +7,14 @@ import SwitchTheme from "../SwitchTheme";
 import { useEffect, useRef, useState } from "react";
 import LinkItems from './Link';
 import { Icons } from '@/src/assets/icons';
+import { Locale } from '@/i18n-config';
 
 export type Language = {
     code: 'en-us' | 'pt-br' | 'es-es';
     label: 'English' | 'Português' | 'Español';
 }
 
-export default function Header({dictionary} : {dictionary: any}) {
+export default function Header({dictionary, lang} : {dictionary: any, lang: Locale}) {
 
     const languages: Language[] = [
         { code: 'en-us', label: 'English' },
@@ -23,7 +24,6 @@ export default function Header({dictionary} : {dictionary: any}) {
     
       const [isOpen, setIsOpen] = useState(false);
       const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
-      const [currentLanguage, setCurrentLanguage] = useState<string>();
       
       const router = useRouter()
     
@@ -32,8 +32,6 @@ export default function Header({dictionary} : {dictionary: any}) {
       useEffect(() => {
         const locale = pathName.split('/')[1]
         const language = languages.find(language => language.code.split('-')[0] === locale)
-
-        setCurrentLanguage(locale)
 
         if (language) setSelectedLanguage(language)
 
@@ -53,7 +51,6 @@ export default function Header({dictionary} : {dictionary: any}) {
     
       const handleLanguageChange = (language: Language) => {
         setIsOpen(false);
-        // Add your language change logic here, for example:
         router.push(redirectedPathName(language.code.split('-')[0]))
       };
     
@@ -74,16 +71,16 @@ export default function Header({dictionary} : {dictionary: any}) {
     return (
         <header className="flex justify-between max-w-screen-xl m-auto h-[50px] items-center p-2">
             <div className="flex items-center">
-                <Link href='/'>
+                <Link href={`/${lang}`}>
                   <Icons.Alien size="26px" />
                 </Link>
             </div>
             
             <div className="flex gap-6 items-center">
                 <nav className="flex gap-4">
-                    <LinkItems href={`/${currentLanguage}`} text={dictionary.header.home}/>
-                    <LinkItems href={`/${currentLanguage}/about`} text={dictionary.header.about}/>
-                    <LinkItems href={`/${currentLanguage}/portfolio`} text={dictionary.header.portfolio}/>
+                    <LinkItems href={`/${lang}`} text={dictionary.header.home}/>
+                    <LinkItems href={`/${lang}/about`} text={dictionary.header.about}/>
+                    <LinkItems href={`/${lang}/portfolio`} text={dictionary.header.portfolio}/>
                 </nav>
 
                 <div className="inline-flex items-center gap-2">

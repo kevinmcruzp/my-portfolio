@@ -4,6 +4,8 @@
         "subtitle": "I'm a Software Engineer",
         "description": "I was born in Carambeí, Brazil, currently living and working in Londrina, Paraná. With outstanding skills in ReactJS, NextJS, TypeScript, NodeJS, and more, I am passionate about innovation and emerging technologies. Get to know me more as we navigate the fascinating world of software development! 🚀",
         "project": {
+            "title": "My projects",
+            "see-more": "See more...",
             "podcast": {
                 "title": "Podcast",
                 "description": "Design of a podcast system with music control, using NextJS, ChakraUI, and more..."
@@ -32,7 +34,7 @@
     "page-about": {
         "title": "Hello 😊, my name is Kevin Cruz",
         "pre-title": "I'm a Software Engineer",
-        "description": "born in Carambeí, Brazil, currently residing in Londrina, Paraná, Brazil. My technical background includes skills in technologies such as ReactJS, NextJS, TypeScript, NodeJS, and more. Passionate about innovation and new technologies, I always seek to learn and apply my knowledge to challenging projects. In addition to my programming background, I have a unique experience as a fisherman and in carpentry. With plans to venture into creating content on YouTube, I am fluent in Portuguese, Spanish, and have intermediate proficiency in English. Get to know me more as we navigate the fascinating world of software development! 🚀",
+        "description": "Born in Carambeí, Brazil, currently residing in Londrina, Paraná, Brazil. My technical background includes skills in technologies such as ReactJS, NextJS, TypeScript, NodeJS, and more. Passionate about innovation and new technologies, I always seek to learn and apply my knowledge to challenging projects. In addition to my programming background, I have a unique experience as a fisherman and in carpentry. With plans to venture into creating content on YouTube, I am fluent in Portuguese, Spanish, and have intermediate proficiency in English. Get to know me more as we navigate the fascinating world of software development! 🚀",
         "personal-information": {
             "full-name": "Full Name",
             "age": "Age",
@@ -71,9 +73,9 @@
         }
     },
     "header": {
-        "home": "home",
-        "about": "about",
-        "portfolio": "portfolio"
+        "home": "Home",
+        "about": "About",
+        "portfolio": "Portfolio"
     },
     "footer": {
         "created-by": "Created by Kevin Cruz"

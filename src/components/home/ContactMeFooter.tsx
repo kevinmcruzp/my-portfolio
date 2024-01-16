@@ -4,9 +4,7 @@ import { Locale } from "@/i18n-config";
 import { getDictionary } from "@/src/get-dictionary";
 import RevealWithBackground from "../utils/RevealWithBackground";
 
-export default async function ContactMeFooter ({lang} : {lang: Locale}) {
-
-    const dictionary = await getDictionary(lang)
+export default function ContactMeFooter ({dictionary} : {dictionary: any}) {
 
     return (
         <div className="h-full max-w-screen-xl m-auto grid md:grid-cols-2 p-2 mt-10">
