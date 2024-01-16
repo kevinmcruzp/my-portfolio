@@ -5,12 +5,13 @@ import { getDictionary } from "@/src/get-dictionary";
 import RevealWithBackground from "../utils/RevealWithBackground";
 import RevealLeftToRight from "../utils/RevealLeftToRight";
 import { Icons } from "@/src/assets/icons";
+import Link from "next/link";
 
 export default async function Main ( {lang} : {lang: Locale}) {
 
   const dictionary = await getDictionary(lang)
 
-  const subtitleWords = dictionary.home[1].subtitle.split(' ');
+  const subtitleWords = dictionary["page-home"].subtitle.split(' ');
   const lastIndex = subtitleWords.length - 1;
 
   return (
@@ -35,7 +36,7 @@ export default async function Main ( {lang} : {lang: Locale}) {
 
           <RevealWithBackground>
             <div className="flex font-bold text-3xl md:text-5xl">
-              {dictionary.home[1].title}
+              {dictionary["page-home"].title}
               <span className="bg-sky-700 rounded-full h-3 w-3 self-end mb-[5px] ml-1"></span>
             </div>
           </RevealWithBackground>
@@ -51,16 +52,16 @@ export default async function Main ( {lang} : {lang: Locale}) {
           <RevealWithBackground>
             <div className="max-w-lg">
               <span className="font-normal text-xs text-secondary md:text-sm max-w-sm">
-                {dictionary.home[1].description}
+                {dictionary["page-home"].description}
               </span>
             </div>
           </RevealWithBackground>
         
           <RevealWithBackground>
-            <button className="flex items-center gap-3 px-9 py-2 bg-sky-800 rounded-lg text-sm font-medium hover:opacity-90">
-                {dictionary.home[2].about.download}    
+            <Link href={dictionary["download-cv"].link} target="_blank" className="flex items-center gap-3 px-9 py-2 bg-sky-800 rounded-lg text-sm font-medium hover:opacity-90">
+                {dictionary["download-cv"].download}
                 <Icons.Download size={20} />
-            </button>
+            </Link>
           </RevealWithBackground>
 
       </div>

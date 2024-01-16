@@ -58,7 +58,7 @@ export default function Card({ dictionary } : {dictionary: any}) {
             >
                 {cards.map((card) => {
                     return (
-                        <CardItem key={card.title} card={card} description={dictionary.portfolio[card.key].description} />
+                        <CardItem key={card.title} card={card} description={dictionary['page-portfolio'][card.key].description} />
                     );
                 })}
             </motion.div>

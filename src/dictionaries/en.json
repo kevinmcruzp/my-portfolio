@@ -1,79 +1,85 @@
 {
-    "home" : {
-        "1": {
-            "title": "Hi👋, I'm Kevin Cruz",
-            "subtitle": "I'm a Software Engineer",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, dolorum tempora, asperiores nemo numquam ullam similique hic fugiat obcaecati molestias laborum iusto inventore ea dicta maxime voluptatum a consequuntur modi?"
-        },
-        "2": {
-            "about": {
-                "title": "About me",
-                "subtitle": "Im Engineer Computer, web Developer having 1 years of experience.",
-                "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore unde commodi eius dignissimos expedita, amet quae, cumque non accusamus incidunt possimus nemo optio asperiores, culpa doloribus saepe provident nulla ut.",
-                "button": "Learn more",
-                "download": "Download CV"
+    "page-home": {
+        "title": "Hi👋, I'm Kevin Cruz",
+        "subtitle": "I'm a Software Engineer",
+        "description": "I was born in Carambeí, Brazil, currently living and working in Londrina, Paraná. With outstanding skills in ReactJS, NextJS, TypeScript, NodeJS, and more, I am passionate about innovation and emerging technologies. Get to know me more as we navigate the fascinating world of software development! 🚀",
+        "project": {
+            "podcast": {
+                "title": "Podcast",
+                "description": "Design of a podcast system with music control, using NextJS, ChakraUI, and more..."
             },
-            "project": {
-                "title": "Projects",
-                "subtitle": "My works",
-                "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore unde commodi eius dignissimos expedita, amet quae, cumque non accusamus incidunt possimus nemo optio asperiores, culpa doloribus saepe provident nulla ut.",
-                "button": "Projects"
+            "reddit": {
+                "title": "Reddit Clone",
+                "description": "Reddit clone using NextJS, TypeScript, ChakraUI, Firebase, and more..."
+            },
+            "dashadmin": {
+                "title": "Admin Dashboard",
+                "description": "Working with dashboard design, charts, and tables."
+            },
+            "button": {
+                "visit": "Visit",
+                "source-code": "Source Code"
             }
         },
-        "3": {
-            "contact": "Get in touch",
+        "footer": {
+            "name": "Kevin Cruz",
+            "profession": "Software Engineer",
+            "get-in-touch": "Get in touch",
             "email": "EMAIL ME",
             "phone": "CALL ME"
         }
     },
-    "about" : {
-        "pre-title": "Hello 😊, my name is Kevin Cruz",
-        "title": "I'm a Software Engineer",
-        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minima dicta magnam a fugit deserunt, mollitia ipsa itaque iure sapiente molestiae hic vero cumque explicabo! Nesciunt adipisci sapiente eligendi accusamus?",
+    "page-about": {
+        "title": "Hello 😊, my name is Kevin Cruz",
+        "pre-title": "I'm a Software Engineer",
+        "description": "born in Carambeí, Brazil, currently residing in Londrina, Paraná, Brazil. My technical background includes skills in technologies such as ReactJS, NextJS, TypeScript, NodeJS, and more. Passionate about innovation and new technologies, I always seek to learn and apply my knowledge to challenging projects. In addition to my programming background, I have a unique experience as a fisherman and in carpentry. With plans to venture into creating content on YouTube, I am fluent in Portuguese, Spanish, and have intermediate proficiency in English. Get to know me more as we navigate the fascinating world of software development! 🚀",
         "personal-information": {
             "full-name": "Full Name",
             "age": "Age",
             "address": "Address",
-            "whatsapp": "Whatsapp",
-            "email": "Email",
-            "social-media": "Social Media",
-            "repository": "Repository"
-        },
-        "button": "DOWNLOAD MY CV"
+            "email": "Email"
+        }
     },
-    "portfolio" : {
+    "page-portfolio": {
         "reddit-clone": {
             "title": "Reddit Clone",
-            "description": "Reddit clone with post system, login, etc..."
+            "description": "Reddit clone with login, posts, comments, likes, and more..."
         },
         "portfolio": {
             "title": "Portfolio",
-            "description": "Portfolio with my projects."
+            "description": "Portfolio with command bar functionality, some projects, skills, and more..."
         },
         "dash-admin": {
             "title": "Admin Dashboard",
-            "description": "Working with dashboard design, charts and tables."
+            "description": "Working with dashboard, charts, tables using TanStack query, pagination, and more..."
         },
         "podcast": {
             "title": "Podcast",
-            "description": "Design of a podcast system with music control."
+            "description": "Podcast system with music control, select episode, and more..."
         },
         "feedback": {
             "title": "Feedback",
-            "description": "Message feedback system design."
+            "description": "Message feedback system, with animation, and more..."
         },
         "move-it": {
             "title": "Move It",
-            "description": "Notification system to students or workers, to take a break and exercise."
+            "description": "Notification system for students or workers, to take a break and do some exercise."
         },
         "messages": {
             "title": "Messages",
-            "description": "Message system design."
+            "description": "Message system with login, send message, display messages, and more.."
         }
     },
     "header": {
         "home": "home",
         "about": "about",
         "portfolio": "portfolio"
+    },
+    "footer": {
+        "created-by": "Created by Kevin Cruz"
+    },
+    "download-cv": {
+        "download": "Download CV",
+        "link": "https://mega.nz/file/C89XDJRb#kbOuP94rYQ_C5pcI6t-33tNmEBEs5Qkhcje2HaAYzTw"
     }
 }

@@ -7,6 +7,7 @@ import Providers from '../../components/Providers'
 import { Locale, i18n } from '../../../i18n-config'
 import RevealLeftToRight from '@/src/components/utils/RevealLeftToRight'
 import Footer from '@/src/components/Footer'
+import { getDictionary } from '@/src/get-dictionary'
 
 export async function generateStaticParams() {
   return i18n.locales.map(locale => ({lang: locale}))
@@ -19,13 +20,15 @@ export const metadata: Metadata = {
   description: 'My portfolio',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: ReactNode,
   params: { lang: Locale },
 }) {
+
+  const dictionary = await getDictionary(params.lang)
 
   return (
       <html lang={params.lang} className='dark' style={{colorScheme: 'dark'}}>
@@ -34,7 +37,7 @@ export default function RootLayout({
             <div className='min-h-screen min-w-full flex flex-col bg-primary dark:bg-bg dark:text-primary'>
               
               <div className='w-full border-b border-divider'>
-                <Header />
+                <Header dictionary={dictionary} />
               </div>
 
               {children}

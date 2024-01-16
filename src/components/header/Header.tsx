@@ -6,13 +6,14 @@ import CustomLanguageSelector from "../CustomLanguageSelector";
 import SwitchTheme from "../SwitchTheme";
 import { useEffect, useRef, useState } from "react";
 import LinkItems from './Link';
+import { Icons } from '@/src/assets/icons';
 
 export type Language = {
     code: 'en-us' | 'pt-br' | 'es-es';
     label: 'English' | 'Português' | 'Español';
 }
 
-export default function Header() {
+export default function Header({dictionary} : {dictionary: any}) {
 
     const languages: Language[] = [
         { code: 'en-us', label: 'English' },
@@ -73,14 +74,16 @@ export default function Header() {
     return (
         <header className="flex justify-between max-w-screen-xl m-auto h-[50px] items-center p-2">
             <div className="flex items-center">
-                Header
+                <Link href='/'>
+                  <Icons.Alien size="26px" />
+                </Link>
             </div>
             
             <div className="flex gap-6 items-center">
                 <nav className="flex gap-4">
-                    <LinkItems href={`/${currentLanguage}`} text='home'/>
-                    <LinkItems href={`/${currentLanguage}/about`} text='about'/>
-                    <LinkItems href={`/${currentLanguage}/portfolio`} text='portfolio'/>
+                    <LinkItems href={`/${currentLanguage}`} text={dictionary.header.home}/>
+                    <LinkItems href={`/${currentLanguage}/about`} text={dictionary.header.about}/>
+                    <LinkItems href={`/${currentLanguage}/portfolio`} text={dictionary.header.portfolio}/>
                 </nav>
 
                 <div className="inline-flex items-center gap-2">

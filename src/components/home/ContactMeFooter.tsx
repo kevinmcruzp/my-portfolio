@@ -21,25 +21,25 @@ export default async function ContactMeFooter ({lang} : {lang: Locale}) {
                             <h1 className="text-xl font-medium">Kevin Cruz</h1>
                         </RevealWithBackground>
                         <RevealWithBackground>
-                            <p className="text-base text-secondary">Software Engineer</p>
+                            <p className="text-base text-secondary">{dictionary["page-home"].footer.profession}</p>
                         </RevealWithBackground>
                     </div>
                 </div>
                 <div className="flex flex-col justify-center items-start gap-5 lg:pl-36">
                     <RevealWithBackground>
-                        <span className="text-xl md:text-2xl font-medium">{dictionary.home[3].contact}</span>
+                        <span className="text-xl md:text-2xl font-medium">{dictionary["page-home"].footer["get-in-touch"]}</span>
                     </RevealWithBackground>
 
                     <RevealWithBackground>
                         <div className="flex w-full pl-1 gap-10">
                             <div className="flex flex-col">
-                                <span className="text-xs text-secondary">{dictionary.home[3].email}</span>
+                                <span className="text-xs text-secondary">{dictionary["page-home"].footer.email}</span>
                                 <span className="text-sm text-primary pb-1 border-b-2 border-divider">
                                     kevin_mcp@outlook.com
                                 </span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-xs text-secondary">{dictionary.home[3].phone} </span>
+                                <span className="text-xs text-secondary">{dictionary["page-home"].footer.phone} </span>
                                 <span className="text-sm text-primary pb-1 border-b-2 border-divider">
                                     +56 9 2184 3543
                                 </span>

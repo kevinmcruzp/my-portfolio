@@ -23,7 +23,7 @@ export default function CardItem({ card, description } : { card: CardProps, desc
         <motion.div
             key={card.title}
             variants={cardItemVariants}
-            className="flex flex-col justify-between border border-gray-800 rounded overflow-hidden shadow-lg h-fit mx-auto md:mx-0 min-h-[405px]"
+            className="flex flex-col justify-between border border-gray-800 rounded overflow-hidden shadow-lg h-fit mx-auto md:mx-0 min-h-full"
         >
             <a
             href={card.href}

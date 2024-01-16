@@ -10,12 +10,16 @@ import {
   RiChatSmile3Line,
 } from "react-icons/ri";
 import {
+  SiCsharp,
   SiCss3,
   SiGit,
   SiHtml5,
   SiJavascript,
   SiLinux,
+  SiMysql,
   SiNextdotjs,
+  SiPostgresql,
+  SiPython,
   SiReact,
   SiTypescript,
 } from "react-icons/si";
@@ -39,6 +43,10 @@ export const Icons = {
   Nodejs: IoLogoNodejs,
   Linux: SiLinux,
   Git: SiGit,
+  MySQL: SiMysql,
+  Postgresql: SiPostgresql,
+  CSharp: SiCsharp,
+  Python: SiPython,
   Alien: GiAlienBug,
   SmileIcon: RiChatSmile2Line,
   SmileIcon2: RiChatSmile3Line,

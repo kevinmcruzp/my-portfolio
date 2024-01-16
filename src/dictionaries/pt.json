@@ -1,79 +1,85 @@
 {
-    "home" : {
-        "1": {
-            "title": "Hi👋, I'm Kevin Cruz",
-            "subtitle": "I'm a Software Engineer",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, dolorum tempora, asperiores nemo numquam ullam similique hic fugiat obcaecati molestias laborum iusto inventore ea dicta maxime voluptatum a consequuntur modi?"
-        },
-        "2": {
-            "about": {
-                "title": "About me",
-                "subtitle": "Im Engineer Computer, web Developer having 1 years of experience.",
-                "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore unde commodi eius dignissimos expedita, amet quae, cumque non accusamus incidunt possimus nemo optio asperiores, culpa doloribus saepe provident nulla ut.",
-                "button": "Learn more",
-                "download": "Download CV"
+    "page-home": {
+        "title": "Oi👋, sou Kevin Cruz!",
+        "subtitle": "Sou um Engenheiro de Software",
+        "description": "Nasci em Carambeí, Brasil, atualmente vivendo e trabalhando em Londrina, Paraná. Com habilidades destacadas em ReactJS, NextJS, TypeScript, NodeJS, e mais, sou apaixonado por inovação e tecnologias emergentes. Conheça-me mais enquanto navegamos pelo fascinante mundo do desenvolvimento de software! 🚀",
+        "project": {
+            "podcast": {
+                "title": "Podcast",
+                "description": "Design de um sistema de podcast com controle de música, usando NextJS, ChakraUI e mais..."
             },
-            "project": {
-                "title": "Projects",
-                "subtitle": "My works",
-                "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore unde commodi eius dignissimos expedita, amet quae, cumque non accusamus incidunt possimus nemo optio asperiores, culpa doloribus saepe provident nulla ut.",
-                "button": "Projects"
+            "reddit": {
+                "title": "Clone do Reddit",
+                "description": "Clone do Reddit usando NextJS, TypeScript, ChakraUI, Firebase e mais..."
+            },
+            "dashadmin": {
+                "title": "Painel de Administração",
+                "description": "Trabalhando com o design de um painel, gráficos e tabelas."
+            },
+            "button": {
+                "visit": "Visitar",
+                "source-code": "Código Fonte"
             }
         },
-        "3": {
-            "contact": "Get in touch",
-            "email": "EMAIL ME",
-            "phone": "CALL ME"
+        "footer": {
+            "name": "Kevin Cruz",
+            "profession": "Engenheiro de Software",
+            "get-in-touch": "Entre em contato",
+            "email": "ME ENVIE UM EMAIL",
+            "phone": "ME LIGUE"
         }
     },
-    "about" : {
-        "pre-title": "Hello 😊, my name is Kevin Cruz",
-        "title": "I'm a Software Engineer",
-        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minima dicta magnam a fugit deserunt, mollitia ipsa itaque iure sapiente molestiae hic vero cumque explicabo! Nesciunt adipisci sapiente eligendi accusamus?",
+    "page-about": {
+        "title": "Oi 😊, meu nome é Kevin Cruz!",
+        "pre-title": "Sou um Engenheiro de Software",
+        "description": "Nascido em Carambeí, Brasil, atualmente morando em Londrina, Paraná, Brasil. Minha formação técnica inclui habilidades em tecnologias como ReactJS, NextJS, TypeScript, NodeJS, e mais. Apaixonado por inovação e novas tecnologias, sempre busco aprender e aplicar meus conhecimentos em projetos desafiadores. Além da minha experiência em programação, tenho uma experiência única como pescador e em carpintaria. Com planos de me aventurar na criação de conteúdo no YouTube, falo fluentemente português, espanhol e tenho proficiência intermediária em inglês. Conheça-me mais enquanto exploramos o fascinante mundo do desenvolvimento de software! 🚀",
         "personal-information": {
-            "full-name": "Full Name",
-            "age": "Age",
-            "address": "Address",
-            "whatsapp": "Whatsapp",
-            "email": "Email",
-            "social-media": "Social Media",
-            "repository": "Repository"
-        },
-        "button": "DOWNLOAD MY CV"
+            "full-name": "Nome Completo",
+            "age": "Idade",
+            "address": "Endereço",
+            "email": "Email"
+        }
     },
-    "portfolio" : {
+    "page-portfolio": {
         "reddit-clone": {
-            "title": "Reddit Clone",
-            "description": "Reddit clone with post system, login, etc..."
+            "title": "Clone do Reddit",
+            "description": "Clone do Reddit com login, posts, comentários, curtidas e mais..."
         },
         "portfolio": {
-            "title": "Portfolio",
-            "description": "Portfolio with my projects."
+            "title": "Portfólio",
+            "description": "Portfólio com funcionalidade de barra de comandos, alguns projetos, habilidades e mais..."
         },
         "dash-admin": {
-            "title": "Admin Dashboard",
-            "description": "Working with dashboard design, charts and tables."
+            "title": "Painel de Administração",
+            "description": "Trabalhando com painel, gráficos, tabelas usando TanStack query, paginação e mais..."
         },
         "podcast": {
             "title": "Podcast",
-            "description": "Design of a podcast system with music control."
+            "description": "Sistema de podcast com controle de música, seleção de episódio e mais..."
         },
         "feedback": {
             "title": "Feedback",
-            "description": "Message feedback system design."
+            "description": "Sistema de feedback de mensagens, com animação e mais..."
         },
         "move-it": {
             "title": "Move It",
-            "description": "Notification system to students or workers, to take a break and exercise."
+            "description": "Sistema de notificação para estudantes ou trabalhadores, para fazer uma pausa e fazer algum exercício."
         },
         "messages": {
-            "title": "Messages",
-            "description": "Message system design."
+            "title": "Mensagens",
+            "description": "Sistema de mensagens com login, enviar mensagem, exibir mensagens e mais..."
         }
     },
     "header": {
-        "home": "home",
-        "about": "about",
-        "portfolio": "portfolio"
+        "home": "início",
+        "about": "sobre",
+        "portfolio": "portfólio"
+    },
+    "footer": {
+        "created-by": "Criado por Kevin Cruz"
+    },
+    "download-cv": {
+        "download": "Baixar CV",
+        "link": "https://mega.nz/file/C89XDJRb#kbOuP94rYQ_C5pcI6t-33tNmEBEs5Qkhcje2HaAYzTw"
     }
 }

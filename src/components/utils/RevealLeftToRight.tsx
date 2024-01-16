@@ -17,7 +17,6 @@ export default function RevealLeftToRight({children, width = 'w-fit'}: RevealLef
 
     useEffect(() => {
 
-        console.log(isInView)
         if (isInView) {
             mainControls.start('visible')
             slideControls.start('visible')

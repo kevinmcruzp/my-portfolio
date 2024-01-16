@@ -6,12 +6,15 @@ import { Icons } from "@/src/assets/icons";
 import RevealWithBackground from "@/src/components/utils/RevealWithBackground";
 import RevealBottomToTop from "@/src/components/utils/RevealBottomToTop";
 import Tooltip from "@/src/components/utils/Tooltip";
+import Link from "next/link";
 
 export default async function About({
     params: { lang },
 }: {params: {lang: Locale}}) {
 
     const dictionary = await getDictionary(lang)
+
+    const description = dictionary["page-about"].description.split(".")
 
     return (
         <section className='flex flex-grow flex-col justify-center w-full max-w-screen-xl mx-auto p-2 gap-32'>
@@ -30,18 +33,24 @@ export default async function About({
                 <div className="flex flex-col justify-center gap-6 md:w-1/2">
                     <div className="flex flex-col justify-center gap-3">
                         <RevealWithBackground>
-                            <span>{dictionary.about["pre-title"]}</span>
+                            <span>{dictionary["page-about"].title}</span>
                         </RevealWithBackground>
 
                         <RevealWithBackground>
                             <span className="text-xl font-medium">
-                                {dictionary.about.title} 🤖
+                                {dictionary["page-about"]["pre-title"]} 🤖
                             </span>
                         </RevealWithBackground>
 
                         <RevealWithBackground>
-                            <p className="text-sm font-light text-secondary">
-                                {dictionary.about.description}
+                            <p className="flex flex-col text-sm font-light text-secondary gap-1">
+                                {description.map((item, index) => {
+                                    return (
+                                        <span key={index}>
+                                            {item}.
+                                        </span>
+                                    )
+                                } )}
                             </p>
                         </RevealWithBackground>
                     </div>
@@ -50,19 +59,19 @@ export default async function About({
                         <table>
                             <tbody>
                                 <tr>
-                                    <td className="text-xs text-secondary pr-7">{dictionary.about["personal-information"]["full-name"].toUpperCase()}</td>
+                                    <td className="text-xs text-secondary pr-7">{dictionary["page-about"]["personal-information"]["full-name"].toUpperCase()}</td>
                                     <td className="text-sm font-light text-primary">Kevin Cruz</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-xs text-secondary">{dictionary.about["personal-information"]["age"].toUpperCase()}</td>
+                                    <td className="text-xs text-secondary">{dictionary["page-about"]["personal-information"]["age"].toUpperCase()}</td>
                                     <td className="text-sm font-light text-primary">25/02/1996</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-xs text-secondary">{dictionary.about["personal-information"]["address"].toUpperCase()}</td>
+                                    <td className="text-xs text-secondary">{dictionary["page-about"]["personal-information"]["address"].toUpperCase()}</td>
                                     <td className="text-sm font-light text-primary">La Serena, Coquimbo, Chile</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-xs text-secondary">{dictionary.about["personal-information"]["email"].toUpperCase()}</td>
+                                    <td className="text-xs text-secondary">{dictionary["page-about"]["personal-information"]["email"].toUpperCase()}</td>
                                     <td className="text-sm font-light text-primary">kevin_mcp@outlook.com</td>
                                 </tr>
                             </tbody>
@@ -71,10 +80,10 @@ export default async function About({
                     
                     <div className="w-full flex items-center justify-end">
                         <RevealWithBackground>
-                            <button className="flex items-center gap-3 px-9 py-2 bg-sky-800 rounded-lg text-sm font-medium hover:opacity-90">
-                                {dictionary.home[2].about.download}    
+                            <Link href={dictionary["download-cv"].link} target="_blank" className="flex items-center gap-3 px-9 py-2 bg-sky-800 rounded-lg text-sm font-medium hover:opacity-90">
+                                {dictionary["download-cv"].download}    
                                 <Icons.Download size={20} />
-                            </button>
+                            </Link>
                         </RevealWithBackground>
                     </div>
                 </div>
@@ -83,7 +92,7 @@ export default async function About({
             <RevealBottomToTop width="w-full">
                 <div className="flex w-full justify-center gap-10 h-auto">
                         <Tooltip text="JavaScript">
-                            <Icons.JavaScript color="#EFD81D" size="26px" />
+                            <Icons.JavaScript color="#EFD81D" size="26px" stroke="black" strokeWidth={0.2} />
                         </Tooltip>
 
                         <Tooltip text="TypeScript">
@@ -91,7 +100,7 @@ export default async function About({
                         </Tooltip>
 
                         <Tooltip text="ReactJS">
-                            <Icons.React color="#61DAFB" size="26px" />
+                            <Icons.React color="#00D8FF" size="26px" />
                         </Tooltip>
 
                         <Tooltip text="NextJS">
@@ -104,6 +113,18 @@ export default async function About({
 
                         <Tooltip text="Linux">
                             <Icons.Linux size="26px" />
+                        </Tooltip>
+
+                        <Tooltip text="C#">
+                            <Icons.CSharp color="#70298E" size="26px" />
+                        </Tooltip>
+
+                        <Tooltip text="Python">
+                            <Icons.Python color="#FFE05B" size="26px" stroke="black" strokeWidth={0.2} />
+                        </Tooltip>
+
+                        <Tooltip text="Postgresql">
+                            <Icons.Postgresql color="#31648C" size="26px" />
                         </Tooltip>
 
                         <Tooltip text="Git">

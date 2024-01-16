@@ -14,6 +14,7 @@ import PortfolioImg from '@/public/img/Portfolio.png'
 import MessageImg from '@/public/img/Message.png'
 import { getDictionary } from '@/src/get-dictionary'
 import RevealBottomToTop from '@/src/components/utils/RevealBottomToTop'
+import Link from 'next/link'
 
 
 export default async function Home ({
@@ -40,15 +41,15 @@ export default async function Home ({
           <div className='w-full max-w-screen-lg mx-auto flex flex-col px-2 py-8 gap-5'>
             <div className='flex justify-between'>
               <span className='text-lg font-medium'>📂 My projects</span>
-              <span className='flex text-xs font-semibold items-center text-sky-700 cursor-pointer hover:opacity-90'>
+              <Link href='/about' className='flex text-xs font-semibold items-center text-sky-700 cursor-pointer hover:opacity-90'>
                 See all
                 <Icons.ArrowRight className='w-4 h-4' />
-              </span>
+              </Link>
             </div>
 
-            <CardProject title={dictionary.portfolio.podcast.title} description={dictionary.portfolio.podcast.description} img={Podcastr} pageURL='https://podcastr-next-kevinmcruzp.vercel.app/' sourceCodeURL='https://github.com/KevinMCruzP/podcastr-next' />
-            <CardProject title={dictionary.portfolio['reddit-clone'].title} description={dictionary.portfolio['reddit-clone'].description} img={RedditClone} pageURL='https://reddit-clone-nextjs-firebase-gamma.vercel.app/' sourceCodeURL='https://github.com/KevinMCruzP/Reddit_Clone-Nextjs-Firebase' imgPosition='left' />
-            <CardProject title={dictionary.portfolio['dash-admin'].title} description={dictionary.portfolio['dash-admin'].description} img={Dashadmin} pageURL='https://dashadmin-kevinmcruzp.vercel.app/dashboard' sourceCodeURL='https://github.com/KevinMCruzP/dashadmin' />
+            <CardProject title={dictionary['page-home'].project.podcast.title} description={dictionary['page-home'].project.podcast.description} img={Podcastr} pageURL='https://podcastr-next-kevinmcruzp.vercel.app/' sourceCodeURL='https://github.com/KevinMCruzP/podcastr-next' />
+            <CardProject title={dictionary['page-home'].project.reddit.title} description={dictionary['page-home'].project.reddit.description} img={RedditClone} pageURL='https://reddit-clone-nextjs-firebase-gamma.vercel.app/' sourceCodeURL='https://github.com/KevinMCruzP/Reddit_Clone-Nextjs-Firebase' imgPosition='left' />
+            <CardProject title={dictionary['page-home'].project.dashadmin.title} description={dictionary['page-home'].project.dashadmin.description} img={Dashadmin} pageURL='https://dashadmin-kevinmcruzp.vercel.app/dashboard' sourceCodeURL='https://github.com/KevinMCruzP/dashadmin' />
 
           </div>
 
