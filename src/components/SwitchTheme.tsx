@@ -23,7 +23,7 @@ export default function SwitchTheme () {
 
     return (
         <button
-            className="flex items-center justify-center h-8 w-16 rounded-full bg-gray-200 dark:bg-gray-800 focus:outline-none"
+            className="flex items-center justify-center h-8 w-16 rounded-full bg-gray-300 dark:bg-gray-800 focus:outline-none"
             onClick={handleThemeToggle}
         >
             {resolvedTheme === 'dark' ? (

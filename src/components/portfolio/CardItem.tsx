@@ -23,7 +23,7 @@ export default function CardItem({ card, description } : { card: CardProps, desc
         <motion.div
             key={card.title}
             variants={cardItemVariants}
-            className="flex flex-col justify-between border border-gray-800 rounded overflow-hidden shadow-lg h-fit mx-auto md:mx-0 min-h-full"
+            className="flex flex-col justify-between border border-gray-200 dark:border-gray-700 rounded overflow-hidden shadow-lg h-fit mx-auto md:mx-0 min-h-full"
         >
             <a
             href={card.href}
@@ -35,16 +35,15 @@ export default function CardItem({ card, description } : { card: CardProps, desc
                 </div>
                 <div className="absolute top-1/2 right-2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Icons.ArrowRight
-                        className="transition-transform duration-300 transform translate-x-full group-hover:translate-x-0"
-                        fill="white"
+                        className="fill-gray-700 dark:fill-primary transition-transform duration-300 transform translate-x-full group-hover:translate-x-0"
                         size={40}
                     />
                 </div>
             </a>
 
             <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{card.title}</div>
-                <p className="text-gray-400 text-base">
+                <div className="text-gray-700 dark:text-primary font-bold text-xl mb-2">{card.title}</div>
+                <p className="text-slate-600 dark:text-secondary text-base">
                     {description}
                 </p>
             </div>
@@ -52,7 +51,7 @@ export default function CardItem({ card, description } : { card: CardProps, desc
                 {card.tags?.map((tag, index) => (
                     <span
                     key={index}    
-                    className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                    className="inline-block bg-gray-600 dark:bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-primary dark:text-gray-700 mr-2 mb-2"
                 >
                     {tag}
                     </span>

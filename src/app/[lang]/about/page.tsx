@@ -32,18 +32,18 @@ export default async function About({
 
                 <div className="flex flex-col justify-center gap-6 md:w-1/2">
                     <div className="flex flex-col justify-center gap-3">
-                    <RevealWithBackground>
-                            <span>{dictionary["page-about"].title}</span>
+                        <RevealWithBackground>
+                            <span className="text-base font-semibold">{dictionary["page-about"].title}</span>
                         </RevealWithBackground>
 
                         <RevealWithBackground>
-                            <span className="text-xl font-medium">
+                            <span className="text-xl font-semibold">
                                 {dictionary["page-about"]["pre-title"]} 🤖
                             </span>
                         </RevealWithBackground>
 
                         <RevealWithBackground>
-                            <p className="flex flex-col text-sm font-light text-secondary gap-1">
+                            <p className="flex flex-col text-sm font-medium text-slate-500 dark:text-secondary gap-1">
                                 {description.map((item, index) => {
                                     return (
                                         <span key={index}>
@@ -59,20 +59,20 @@ export default async function About({
                         <table>
                             <tbody>
                                 <tr>
-                                    <td className="text-xs text-secondary pr-7">{dictionary["page-about"]["personal-information"]["full-name"].toUpperCase()}</td>
-                                    <td className="text-sm font-light text-primary">Kevin Cruz</td>
+                                    <td className="text-xs font-medium text-slate-600 dark:text-secondary pr-7">{dictionary["page-about"]["personal-information"]["full-name"].toUpperCase()}</td>
+                                    <td className="text-sm font-normal text-gray-700 dark:text-primary">Kevin Cruz</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-xs text-secondary">{dictionary["page-about"]["personal-information"]["age"].toUpperCase()}</td>
-                                    <td className="text-sm font-light text-primary">25/02/1996</td>
+                                    <td className="text-xs font-medium text-slate-600 dark:text-secondary">{dictionary["page-about"]["personal-information"]["age"].toUpperCase()}</td>
+                                    <td className="text-sm font-normal text-gray-700 dark:text-primary">25/02/1996</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-xs text-secondary">{dictionary["page-about"]["personal-information"]["address"].toUpperCase()}</td>
-                                    <td className="text-sm font-light text-primary">La Serena, Coquimbo, Chile</td>
+                                    <td className="text-xs font-medium text-slate-600 dark:text-secondary">{dictionary["page-about"]["personal-information"]["address"].toUpperCase()}</td>
+                                    <td className="text-sm font-normal text-gray-700 dark:text-primary">La Serena, Coquimbo, Chile</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-xs text-secondary">{dictionary["page-about"]["personal-information"]["email"].toUpperCase()}</td>
-                                    <td className="text-sm font-light text-primary">kevin_mcp@outlook.com</td>
+                                    <td className="text-xs font-medium text-slate-600 dark:text-secondary">{dictionary["page-about"]["personal-information"]["email"].toUpperCase()}</td>
+                                    <td className="text-sm font-normal text-gray-700 dark:text-primary">kevin_mcp@outlook.com</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -80,7 +80,7 @@ export default async function About({
                     
                     <div className="w-full flex items-center justify-end">
                         <RevealWithBackground>
-                            <Link href={dictionary["download-cv"].link} target="_blank" className="flex items-center gap-3 px-9 py-2 bg-sky-800 rounded-lg text-sm font-medium hover:opacity-90">
+                            <Link href={dictionary["download-cv"].link} target="_blank" className="flex items-center gap-3 px-9 py-2 bg-sky-800 rounded-lg text-primary text-sm font-medium hover:opacity-90">
                                 {dictionary["download-cv"].download}    
                                 <Icons.Download size={20} />
                             </Link>
@@ -92,7 +92,7 @@ export default async function About({
             <RevealBottomToTop width="w-full">
                 <div className="flex w-full justify-center gap-10 h-auto">
                         <Tooltip text="JavaScript">
-                            <Icons.JavaScript color="#EFD81D" size="26px" stroke="black" strokeWidth={0.2} />
+                            <Icons.JavaScript color="#EFD81D" size="26px" />
                         </Tooltip>
 
                         <Tooltip text="TypeScript">
@@ -120,7 +120,7 @@ export default async function About({
                         </Tooltip>
 
                         <Tooltip text="Python">
-                            <Icons.Python color="#FFE05B" size="26px" stroke="black" strokeWidth={0.2} />
+                            <Icons.Python color="#FFE05B" size="26px" />
                         </Tooltip>
 
                         <Tooltip text="Postgresql">

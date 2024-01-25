@@ -69,7 +69,7 @@ export default function Header({dictionary, lang} : {dictionary: any, lang: Loca
       }, []);
 
     return (
-        <header className="flex justify-between max-w-screen-xl m-auto h-[50px] items-center p-2">
+        <header className="flex justify-between max-w-screen-xl m-auto h-[50px] items-center p-2 text-gray-700 font-medium dark:text-primary">
             <div className="flex items-center">
                 <Link href={`/${lang}`}>
                   <Icons.Alien size="26px" />
@@ -92,6 +92,7 @@ export default function Header({dictionary, lang} : {dictionary: any, lang: Loca
                         selectedLanguage={selectedLanguage} 
                         setIsOpen={setIsOpen} 
                     />
+                    
                     <SwitchTheme />
                 </div>
             </div>

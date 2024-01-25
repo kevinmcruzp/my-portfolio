@@ -26,12 +26,12 @@ export default async function Home ({
         </section>
       </RevealLeftToRight>
       
-      <section className='min-h-screen w-full bg-bg flex flex-col'>
+      <section className='min-h-screen w-full flex flex-col'>
         <RevealBottomToTop width='w-full'>
           <ShapeDivider />
         </RevealBottomToTop>
 
-        <div className='flex flex-1 w-full bg-bg_secondary'>
+        <div className='flex flex-1 w-full bg-gray-300 dark:bg-bg_secondary'>
 
           <div className='w-full max-w-screen-lg mx-auto flex flex-col px-2 py-8 gap-5'>
             <div className='flex justify-between'>
@@ -47,7 +47,6 @@ export default async function Home ({
             <CardProject title={dictionary['page-home'].project.dashadmin.title} description={dictionary['page-home'].project.dashadmin.description} img={Dashadmin} pageURL='https://dashadmin-kevinmcruzp.vercel.app/dashboard' sourceCodeURL='https://github.com/KevinMCruzP/dashadmin' />
 
           </div>
-
         </div>
       </section>
 

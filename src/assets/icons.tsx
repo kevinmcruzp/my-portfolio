@@ -22,8 +22,9 @@ import {
   SiPython,
   SiReact,
   SiTypescript,
+  SiMinutemailer,
 } from "react-icons/si";
-
+import { FaPhoneVolume } from "react-icons/fa6";
 
 export const Icons = {
   Github: FiGithub,
@@ -52,4 +53,6 @@ export const Icons = {
   SmileIcon2: RiChatSmile3Line,
   Download: FiDownload,
   ArrowUpRight: FiArrowUpRight,
+  Mail: SiMinutemailer,
+  Phone: FaPhoneVolume
 };

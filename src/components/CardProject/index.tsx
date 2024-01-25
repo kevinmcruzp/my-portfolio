@@ -36,14 +36,14 @@ export default function CardProject(
                     </RevealWithBackground>
 
                     <RevealWithBackground>
-                        <p className={`text-sm font-medium text-gray-400 max-w-md ${imgPosition == 'right' ? 'text-end' : 'text-start'}`}>
+                        <p className={`text-sm font-medium text-slate-600 dark:text-gray-400 max-w-md ${imgPosition == 'right' ? 'text-end' : 'text-start'}`}>
                             {description}
                         </p>
                     </RevealWithBackground>
 
                     <RevealWithBackground>
                         <div className='flex gap-2'>
-                            <Link href={pageURL} target="_blank" className='flex items-center gap-3 px-9 py-2 bg-sky-800 rounded-lg text-sm font-medium hover:opacity-90'>
+                            <Link href={pageURL} target="_blank" className='text-primary flex items-center gap-3 px-9 py-2 bg-sky-800 rounded-lg text-sm font-medium hover:opacity-90'>
                                 <Icons.ArrowUpRight className='w-4 h-4' />
                                 Visit
                             </Link>

@@ -72,6 +72,6 @@ export const cards: CardProps[] = [
     title: "Feedback",
     img: Feedback,
     alt: 'feedback',
-    href: "https://moveit-kevinmcruzp.vercel.app/"
+    href: "https://nlw-return-react.vercel.app/"
   }
 ];

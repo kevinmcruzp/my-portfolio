@@ -34,7 +34,7 @@ export default async function RootLayout({
       <html lang={params.lang} className='dark' style={{colorScheme: 'dark'}}>
         <body className={inter.className}>
           <Providers>
-            <div className='min-h-screen min-w-full flex flex-col bg-primary dark:bg-bg dark:text-primary'>
+            <div className='min-h-screen min-w-full flex flex-col bg-primary text-gray-800 dark:bg-bg dark:text-primary'>
               
               <div className='w-full border-b border-divider'>
                 <Header lang={params.lang} dictionary={dictionary} />
