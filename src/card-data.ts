@@ -5,6 +5,7 @@ import RedditClone from '@/public/img/RedditClone.png'
 import Dashadmin from '@/public/img/Dashadmin.png'
 import PortfolioImg from '@/public/img/Portfolio.png'
 import MessageImg from '@/public/img/Message.png'
+import DragAndDrop from '@/public/img/DragAndDrop.png'
 import { Icons } from "@/src/assets/icons";
 import { StaticImageData } from 'next/image'
 
@@ -49,6 +50,14 @@ export const cards: CardProps[] = [
     img: RedditClone,
     alt: 'reddit clone',
     href: "https://reddit-clone-nextjs-firebase-gamma.vercel.app/"
+  },
+  {
+    key: 'drag-and-drop',
+    tags: ['Nextjs','Tailwind'],
+    title: "Drag and Drop",
+    img: DragAndDrop,
+    alt: 'Drag and Drop',
+    href: "https://drag-and-drop-nextjs-teal.vercel.app/"
   },
   {
     key: 'portfolio',

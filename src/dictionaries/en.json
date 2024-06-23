@@ -70,6 +70,10 @@
         "messages": {
             "title": "Messages",
             "description": "Message system with login, send message, display messages, and more.."
+        },
+        "drag-and-drop": {
+            "title": "Drag and Drop",
+            "description": "Drag and drop system with animation, and more..."
         }
     },
     "header": {

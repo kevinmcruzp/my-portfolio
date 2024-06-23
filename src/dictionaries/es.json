@@ -70,6 +70,10 @@
         "messages": {
             "title": "Mensajes",
             "description": "Sistema de mensajes con inicio de sesión, enviar mensajes, mostrar mensajes y más..."
+        },
+        "drag-and-drop": {
+            "title": "Arrastrar y Soltar",
+            "description": "Sistema de arrastrar y soltar con animación y más..."
         }
     },
     "header": {
